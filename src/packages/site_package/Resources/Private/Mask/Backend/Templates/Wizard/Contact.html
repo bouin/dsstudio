@@ -1,0 +1,111 @@
+
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <div id="c{data.uid}" class="font-grey link-link padding-top-6 padding-bottom-6 mask-element frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10">
+                    <f:if condition="{data.header}">
+                        <h2 class="small-h2">{data.header}</h2>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-xl-8 ">
+                    <div class="justify-content-between d-flex flex-column flex-md-row smaller-one">
+                        <div class="one-padding">
+                            <f:if condition="{data.tx_mask_title_first_column}">
+                                <div class="font-25 font-larken bottom-40">
+                                    {data.tx_mask_title_first_column}
+                                </div>
+                            </f:if>
+                            <f:if condition="{data.tx_mask_first_column}">
+                                        <f:for each="{data.tx_mask_first_column}" as="data_item">
+                                            <p class="mb-2">
+                                                <f:if condition="{data_item.tx_mask_title}">
+                                                    <span class="font-larken-medium pe-3">
+                                                        <f:format.stripTags allowedTags="<span><div><br><a>">
+                                                            {data_item.tx_mask_title}
+                                                        </f:format.stripTags>
+                                                    </span>
+                                                </f:if>
+
+                                                <f:if condition="{data_item.tx_mask_text_or_something}">
+                                                    <span>
+                                                        <f:format.stripTags allowedTags="<span><div><br><a>">
+                                                            {data_item.tx_mask_text_or_something -> f:format.html()}
+                                                        </f:format.stripTags>
+                                                    </span>
+                                                </f:if>
+                                            </p>
+                                        </f:for>
+
+                            </f:if>
+                        </div>
+                        <div class="one-padding">
+                            <f:if condition="{data.tx_mask_title_second_column}">
+                                <div class="font-25 font-larken bottom-40">
+                                    {data.tx_mask_title_second_column}
+                                </div>
+                            </f:if>
+                            <f:if condition="{data.tx_mask_second_column}">
+
+                                    <f:for each="{data.tx_mask_second_column}" as="data_item">
+                                        <p class="mb-2">
+                                            <f:if condition="{data_item.tx_mask_text_second_column}">
+                                                <span class="pe-3">
+                                                    <f:format.stripTags allowedTags="<span><div><br><a>">
+                                                        {data_item.tx_mask_text_second_column -> f:format.html()}
+                                                    </f:format.stripTags>
+                                                </span>
+                                            </f:if>
+                                        </p>
+                                    </f:for>
+
+                            </f:if>
+                        </div>
+                        <div class="one-padding">
+                            <f:if condition="{data.tx_mask_title_third_column}">
+                                <div class="font-25 font-larken bottom-40">
+                                    {data.tx_mask_title_third_column}
+                                </div>
+
+                            </f:if>
+                            <f:if condition="{data.tx_mask_third_column}">
+                                    <f:for each="{data.tx_mask_third_column}" as="data_item">
+                                        <p class="mb-2">
+
+                                            <f:if condition="{data_item.tx_mask_title_third_column}">
+                                                <span class="font-larken-medium pe-3">
+                                                    <f:format.stripTags allowedTags="<span><div><br><a>">
+                                                        {data_item.tx_mask_title_third_column}
+                                                    </f:format.stripTags>
+
+                                                </span>
+                                            </f:if>
+
+                                            <f:if condition="{data_item.tx_mask_text_third_column}">
+                                                <span>
+                                                    <f:format.stripTags allowedTags="<span><div><br><a>">
+                                                        {data_item.tx_mask_text_third_column -> f:format.html()}
+                                                    </f:format.stripTags>
+                                                </span>
+                                            </f:if>
+
+                                        </p>
+                                    </f:for>
+                            </f:if>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</f:spaceless>
+
+
+
+
+

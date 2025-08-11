@@ -1,0 +1,39 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:spaceless>
+
+    <div id="c{data.uid}" class="font-beige  mask-element frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+        <f:if condition="{data.tx_mask_contact_image}">
+            <f:for each="{data.tx_mask_contact_image}" as="file">
+
+                <div class="contact-wrapper position-relative">
+                    <div class="image-darker">
+                        <f:image image="{file}" width="1920" class="w-100 h-auto d-none d-md-block"/>
+                        <f:for each="{data.tx_mask_image_contact_mobile}" as="mobile">
+                            <f:image image="{mobile}" width="1200" class="w-100 h-auto d-block d-md-none"/>
+                        </f:for>
+                    </div>
+                    <div class="position-absolute absolute-contact text-center w-70">
+                        <f:if condition="{data.tx_mask_contact_text}">
+                            {data.tx_mask_contact_text -> f:format.html()}
+                        </f:if>
+                        <f:if condition="{data.tx_mask_link_contact}">
+                            <f:link.typolink parameter="{data.tx_mask_link_contact}">
+                                <f:if condition="{data.tx_mask_text_on_button}">
+                                    <span class="text-uppercase">
+                                        {data.tx_mask_text_on_button}
+                                    </span>
+                                </f:if>
+                            </f:link.typolink>
+                        </f:if>
+
+                    </div>
+                </div>
+            </f:for>
+        </f:if>
+    </div>
+
+</f:spaceless>
+
+</html>
+

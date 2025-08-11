@@ -1,0 +1,47 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <div id="c{data.uid}" class="font-gold text-center padding-top-6 padding-bottom-6 bck-grey mask-element frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 padding-bottom-50">
+
+                    <f:if condition="{data.tx_mask_kitchen_headline}">
+                        <span class="text-uppercase font-38-standard-font">
+                            {data.tx_mask_kitchen_headline -> f:format.html()}
+                        </span>
+                    </f:if>
+
+                    <f:if condition="{data.tx_mask_kitchen_link}">
+                        <f:link.typolink parameter="{data.tx_mask_kitchen_link}">
+                            <f:if condition="{data.tx_mask_kitchen_button}">
+                                <span class="text-uppercase">
+                                    {data.tx_mask_kitchen_button}
+                                </span>
+                            </f:if>
+                        </f:link.typolink>
+                    </f:if>
+
+                </div>
+                <div class="col-12 col-md-10">
+                    <f:if condition="{data.tx_mask_kitchen_image_two}">
+                        <f:for each="{data.tx_mask_kitchen_image_two}" as="file">
+                            <div class="d-none d-md-block">
+                                <f:image image="{file}" width="1920" class="w-100 h-auto"/>
+                            </div>
+                        </f:for>
+                    </f:if>
+                    <f:if condition="{data.tx_mask_kitchen_mobile_image}">
+                        <f:for each="{data.tx_mask_kitchen_mobile_image}" as="file">
+                            <div class="d-block d-md-none">
+                                <f:image image="{file}" width="1920" class="w-100 h-auto" />
+                            </div>
+                        </f:for>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</f:spaceless>
+</html>

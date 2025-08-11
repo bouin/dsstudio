@@ -1,0 +1,33 @@
+{
+  "name": "studio-thom-pfister-site-package",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "https://studiothompfister.com",
+  "author": "Daniel Hackiewicz",
+  "version": "1.0.0",
+  "license": "GPL-2.0-or-later",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "grunt": "^1.0.4",
+    "grunt-browser-sync": "^2.2",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-postcss": "^0.9.0",
+    "grunt-reload": "^0.2.0",
+    "grunt-sass": "^3.0.2"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/grunt",
+    "css": "./node_modules/.bin/grunt css",
+    "watch": "./node_modules/.bin/grunt watch"
+  },
+  "dependencies": {
+    "postcss": "^8.4.32",
+    "sass": "^1.69.5"
+  }
+}

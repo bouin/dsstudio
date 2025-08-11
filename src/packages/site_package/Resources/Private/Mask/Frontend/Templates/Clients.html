@@ -1,0 +1,131 @@
+<div class="container clients">
+    <div class="row justify-content-center justify-content-start">
+        <div class="col-12 col-md-3">
+            <f:if condition="{data.header}">
+                <p class="text-smaller">
+                    {data.header}
+                </p>
+            </f:if>
+        </div>
+        <div class="col-12 col-md-9 this-is-section">
+            <f:if condition="{data.tx_mask_clients_all}">
+                <f:for each="{data.tx_mask_clients_all}" as="data_item" iteration="iterix">
+                    <div class="mb-3 {f:if(condition: '{iterix.isLast}',then:'',else:'mb-5')}">
+                        <f:if condition="{data_item.tx_mask_name_of_teh_client}">
+                            <h2 class="mb-0">{data_item.tx_mask_name_of_teh_client}</h2>
+                        </f:if>
+                        <div class="container-fluid mx-0 mb-4">
+
+                            <div class="row f15-muss">
+                                <div class="col-12 px-0">
+                                    <f:if condition="{data_item.tx_mask_line_of_text}">
+                                        <f:then>
+                                            <div class="pt-1">
+                                                <f:format.raw>{data_item.tx_mask_line_of_text}</f:format.raw>
+                                            </div>
+                                        </f:then>
+                                        <f:else>
+                                            <button class="btn btn-link font-vietnam {f:if(condition: '{iterix.isFirst}',then:'',else:'collapsed')}" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSchaerer{data_item.uid}" aria-expanded="false" aria-controls="collapseSchaerer{data_item.uid}">
+                                        <span class="plus">
+                                            <span class="pe-2 d-inline-block">+</span> Case Study
+                                        </span>
+                                                <span class="minus">
+                                            <span class="pe-2 d-inline-block">-</span> Case Study
+                                        </span>
+                                            </button>
+                                            <div class="collapse {f:if(condition: '{iterix.isFirst}',then:'show')}" id="collapseSchaerer{data_item.uid}">
+                                                <div class="font-15 pt-3">
+                                                    <div class="container mx-0">
+                                                        <div class="row pt-3 pb-1">
+                                                            <div class="col-12 col-lg-6 ps-0">
+                                                                <div class="pe-2">
+                                                                    <p>Aufgabe</p>
+                                                                    <f:if condition="{data_item.tx_mask_aufgabe}">
+                                                                        <f:then>
+                                                                            <f:format.html>{data_item.tx_mask_aufgabe}</f:format.html>
+                                                                        </f:then>
+                                                                        <f:else>
+                                                                            tbd.
+                                                                        </f:else>
+                                                                    </f:if>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-lg-6 ps-0">
+                                                                <div class="pe-2">
+                                                                    <p>Lösung</p>
+                                                                    <f:if condition="{data_item.tx_mask_solution_}">
+                                                                        <f:then>
+                                                                            <f:format.html>{data_item.tx_mask_solution_}</f:format.html>
+                                                                        </f:then>
+                                                                        <f:else>
+                                                                            tbd.
+                                                                        </f:else>
+                                                                    </f:if>
+                                                                    <f:if condition="{data_item.tx_mask_html_code_of_video}">
+                                                                        <!-- Button trigger modal -->
+                                                                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal{iterix.cycle}" size="text-decoration:underline;" style="border-radius: 30px">
+                                                                            {data_item.tx_mask_video_text_link}
+                                                                        </button>
+                                                                        <!-- Modal -->
+                                                                        <div class="modal fade" id="exampleModal{iterix.cycle}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                                                                <div class="modal-content">
+                                                                                    <div class="d-flex justify-content-end align-items-end p-3">
+                                                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <f:format.raw>{data_item.tx_mask_html_code_of_video}</f:format.raw>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </f:if>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row pt-5 pb-5">
+
+                                                            <div class="col-12 col-lg-6 ps-0">
+                                                                <div class="pe-2">
+                                                                    <p>Scope</p>
+                                                                    <f:if condition="{data_item.tx_mask_scope}">
+                                                                        <f:then>
+                                                                            <f:format.html>{data_item.tx_mask_scope}</f:format.html>
+                                                                        </f:then>
+                                                                        <f:else>
+                                                                            tbd.
+                                                                        </f:else>
+                                                                    </f:if>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-lg-6 ps-0">
+                                                                <div class="pe-2">
+                                                                    <p>Resultat</p>
+                                                                    <f:if condition="{data_item.tx_mask_result}">
+                                                                        <f:then>
+                                                                            <f:format.html>{data_item.tx_mask_result}</f:format.html>
+                                                                        </f:then>
+                                                                        <f:else>
+                                                                            tbd.
+                                                                        </f:else>
+                                                                    </f:if>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </f:else>
+                                    </f:if>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </f:for>
+            </f:if>
+        </div>
+    </div>
+</div>
+
+

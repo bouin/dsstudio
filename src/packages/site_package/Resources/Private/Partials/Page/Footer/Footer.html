@@ -1,0 +1,47 @@
+<div xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+    <footer id="footer_kontakt" class="section footer_kontakt">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <f:cObject typoscriptObjectPath="lib.footer1"></f:cObject>
+                    <span class="d-none d-lg-block">
+                        <f:cObject typoscriptObjectPath="lib.footer2"></f:cObject>
+                    </span>
+                    <span class="d-block d-lg-none">
+                        <f:cObject typoscriptObjectPath="lib.footernew"></f:cObject>
+                    </span>
+
+                </div>
+            </div>
+            <div class="row social-row">
+                <div class="col-12 d-flex justify-content-center">
+                    <a href="{settings.instagram}" target="_blank" class="button-david">Instagram</a>
+                    <a href="{settings.linkedin}" target="_blank" class="button-david">Linkedin</a>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-12 pb-3 emailrow">
+                    <f:cObject typoscriptObjectPath="lib.footer3"></f:cObject>
+                </div>
+                <div class="col-12 pt-3 emailrow">
+                    <address>
+                        <f:cObject typoscriptObjectPath="lib.footer4"></f:cObject>
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 d-flex justify-content-center font-12-normal">
+                    <f:cObject typoscriptObjectPath="lib.disclaimer"></f:cObject>
+                    <f:cObject typoscriptObjectPath="lib.impressum"></f:cObject>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center pt-2" style="opacity: .6">
+                    <p style="font-size: 10px">© David Schaerer Studio [[YEAR]]</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>

@@ -1,0 +1,49 @@
+// Variables
+$blue: #BFDAEB;
+$lightblue: #D8E5F1;
+$lightbeige: #F8EBDC;
+$beige: #E5C5A3;
+$dark: #2B3841;
+$newblack: #2E282A;
+
+$green: #219A62;
+$orange: #ffa360;
+$violett:#CFB9E2;
+$yellow: #F0DE99;
+$lightgreen: #7FCACA;
+$pink: #E9A5C4;
+
+$psize: 19px;
+
+$grey: grey;
+$white: white;
+$black: black;
+
+$trans: all .3s ease-in-out;
+$font1: 'editorial_regular', Arial, Helvetica, serif;
+$font2: "Be Vietnam Pro", sans-serif;
+
+$font1-medium: 'adelle_sanssemibold', Arial, Helvetica, serif;
+$font1-bold: 'adelle_sansbold', Arial, Helvetica, serif;
+$font1-bold-italic: 'adelle_bold_italic', Arial, Helvetica, serif;
+
+// Predefined Break-points
+$xxl: 1399.9px;
+$xl: 1199.9px;
+$lg: 991.9px;
+$md: 767.9px;
+$sm: 575.9px;
+$xs: 99.9px;
+
+@mixin button {
+  font-size: 18px;
+  transition: all .2s ease-in-out;
+  text-decoration: none;
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  transition: all .2s ease-in-out;
+  width: auto;
+}
+
+

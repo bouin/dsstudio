@@ -1,0 +1,35 @@
+
+<div class="container" >
+    <div class="row justify-content-center justify-content-start">
+        <div class="col-12 mb-4">
+            <f:if condition="{data.header}">
+                <p class="font-smaller">{data.header}</p>
+            </f:if>
+        </div>
+    </div>
+
+        <f:if condition="{data.tx_mask_section_team}">
+            <f:for each="{data.tx_mask_section_team}" as="data_item">
+                <div class="row mb-5">
+                <div class="col-12 col-md-3 mb-3">
+                    <f:if condition="{data_item.tx_mask_name_item}">
+                        <div class="like-h4">
+                            <f:format.html>{data_item.tx_mask_name_item}</f:format.html>
+                        </div>
+                    </f:if>
+                </div>
+                <div class="col-12 col-md-9 mb-3 text-center text-md-start">
+                    <div class="contact-team">
+                        <f:if condition="{data_item.tx_mask_email_usw_item}">
+                            <f:format.html>{data_item.tx_mask_email_usw_item}</f:format.html>
+                        </f:if>
+                    </div>
+                </div>
+                </div>
+            </f:for>
+        </f:if>
+
+</div>
+
+
+

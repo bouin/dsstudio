@@ -1,0 +1,232 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
+
+
+################
+#### HELPER ####
+################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:site_package/Configuration/TypoScript/Helper/DynamicContent.typoscript">
+
+
+##############
+#### PAGE ####
+##############
+page = PAGE
+page {
+    typeNum = 0
+
+    bodyTag >
+    bodyTagCObject = TEXT
+    bodyTagCObject.dataWrap = <body id="top" class="page-{field:uid} parent-page-{field:pid}">
+
+    shortcutIcon = EXT:site_package/Resources/Public/Favicon/favicon.png
+
+    headerData.10 = TEXT
+    headerData.10.value (
+            <link rel="apple-touch-icon" sizes="57x57" href="/fileadmin/user_upload/Favicon/apple-icon-57x57.png">
+            <link rel="apple-touch-icon" sizes="60x60" href="/fileadmin/user_upload/Favicon/apple-icon-60x60.png">
+            <link rel="apple-touch-icon" sizes="72x72" href="/fileadmin/user_upload/Favicon/apple-icon-72x72.png">
+            <link rel="apple-touch-icon" sizes="76x76" href="/fileadmin/user_upload/Favicon/apple-icon-76x76.png">
+            <link rel="apple-touch-icon" sizes="114x114" href="/fileadmin/user_upload/Favicon/apple-icon-114x114.png">
+            <link rel="apple-touch-icon" sizes="120x120" href="/fileadmin/user_upload/Favicon/apple-icon-120x120.png">
+            <link rel="apple-touch-icon" sizes="144x144" href="/fileadmin/user_upload/Favicon/apple-icon-144x144.png">
+            <link rel="apple-touch-icon" sizes="152x152" href="/fileadmin/user_upload/Favicon/apple-icon-152x152.png">
+            <link rel="apple-touch-icon" sizes="180x180" href="/fileadmin/user_upload/Favicon/apple-icon-180x180.png">
+            <link rel="icon" type="image/png" sizes="192x192"  href="/fileadmin/user_upload/Favicon/android-icon-192x192.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="/fileadmin/user_upload/Favicon/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="96x96" href="/fileadmin/user_upload/Favicon/favicon-96x96.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="/fileadmin/user_upload/Favicon/favicon-16x16.png">
+            <meta name="msapplication-TileColor" content="#ffffff">
+            <meta name="msapplication-TileImage" content="/fileadmin/user_upload/Favicon/ms-icon-144x144.png">
+            <meta name="theme-color" content="#ffffff">
+    )
+    headerData.20 = TEXT
+    headerData.20.value (
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
+    )
+
+    headerData.50 = TEXT
+    headerData.50.value (
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-S42ZK1BT18"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-S42ZK1BT18');
+        </script>
+    )
+
+
+    10 = FLUIDTEMPLATE
+    10 {
+
+        # Template names will be generated automatically by converting the applied
+        # backend_layout, there is no explicit mapping necessary anymore.
+        #
+        # BackendLayout Key
+        # subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+        #
+        # Backend Record
+        # uid: 1 -> 1.html
+        #
+        # Database Entry
+        # value: -1 -> None.html
+        # value: pagets__subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+        templateName = TEXT
+        templateName {
+            cObject = TEXT
+            cObject {
+                data = pagelayout
+                required = 1
+                case = uppercamelcase
+                split {
+                    token = pagets__
+                    cObjNum = 1
+                    1.current = 1
+                }
+            }
+            ifEmpty = Default
+        }
+
+        templateRootPaths {
+            0 = EXT:site_package/Resources/Private/Templates/Page/
+            1 = {$page.fluidtemplate.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:site_package/Resources/Private/Partials/Page/
+            1 = {$page.fluidtemplate.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:site_package/Resources/Private/Layouts/Page/
+            1 = {$page.fluidtemplate.layoutRootPath}
+        }
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = media
+            }
+            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            20 {
+                levels = 1
+                includeSpacer = 1
+                as = mainnavigation
+            }
+            30 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+            30 {
+                languages = auto
+                as = languagenavigation
+            }
+        }
+        settings {
+            x = {$link.x}
+            linkedin = {$link.linkedin}
+            instagram = {$link.instagram}
+        }
+    }
+
+    meta {
+        viewport = {$page.meta.viewport}
+        robots = {$page.meta.robots}
+        apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
+        description = {$page.meta.description}
+        description {
+            override.field = description
+        }
+        author = {$page.meta.author}
+        author {
+            override.field = author
+        }
+        keywords = {$page.meta.keywords}
+        keywords {
+            override.field = keywords
+        }
+        X-UA-Compatible = {$page.meta.compatible}
+        X-UA-Compatible {
+            attribute = http-equiv
+        }
+
+        # OpenGraph Tags
+        og:title {
+            attribute = property
+            field = title
+        }
+        og:site_name {
+            attribute = property
+            data = TSFE:tmpl|setup|sitetitle
+        }
+        og:description = {$page.meta.description}
+        og:description {
+            attribute = property
+            field = description
+        }
+        og:image {
+            attribute = property
+            stdWrap.cObject = FILES
+            stdWrap.cObject {
+                references {
+                    data = levelfield:-1, media, slide
+                }
+                maxItems = 1
+                renderObj = COA
+                renderObj {
+                    10 = IMG_RESOURCE
+                    10 {
+                        file {
+                            import.data = file:current:uid
+                            treatIdAsReference = 1
+                            width = 1280c
+                            height = 720c
+                        }
+                        stdWrap {
+                            typolink {
+                                parameter.data = TSFE:lastImgResourceInfo|3
+                                returnLast = url
+                                forceAbsoluteUrl = 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    includeCSSLibs {
+    }
+
+    includeCSS {
+        site_package_bt = EXT:site_package/Resources/Public/Css/libs/bootstrap.min.css
+        site_package_swiper_css = EXT:site_package/Resources/Public/Css/libs/swiper-bundle.min.css
+        site_package_style = EXT:site_package/Resources/Public/Css/dest/app.css
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJSFooterlibs {
+        site_package_jquery = EXT:site_package/Resources/Public/JavaScript/libs/jquery.min.js
+        site_package_bundle = EXT:site_package/Resources/Public/JavaScript/libs/bootstrap.bundle.min.js
+        #site_package_app = EXT:site_package/Resources/Public/JavaScript/dest/app.min.js
+        site_package_app = EXT:site_package/Resources/Public/JavaScript/src/app.js
+    }
+
+}
+
+@import 'EXT:site_package/Configuration/TypoScript/BASE/config.typoscript'
+@import 'EXT:site_package/Configuration/TypoScript/BASE/mainnavigation.typoscript'
+@import 'EXT:site_package/Configuration/TypoScript/BASE/sitemap.typoscript'
+@import 'EXT:site_package/Configuration/TypoScript/BASE/container.typoscript'
+@import 'EXT:site_package/Configuration/TypoScript/BASE/footer.typoscript'
+@import 'EXT:site_package/Configuration/TypoScript/BASE/records.typoscript'
+@import 'EXT:site_package/Configuration/TypoScript/BASE/experimental.typoscript'
+
+
+
+
+

@@ -1,0 +1,78 @@
+#
+# TCEFORM
+#
+TCEFORM {
+    pages {
+    }
+    tt_content {
+        #FRAME Classes
+        frame_class {
+            removeItems = ruler-before, ruler-after, indent, indent-left, indent-right, none
+            addItems {
+                pink-backgorund = Pink background / green font
+                green-backgorund = Green background / green font
+            }
+        }
+        #LAYOUTS
+        layout {
+            removeItems = 1,2,3
+            addItems {
+                4 = Background Beige
+                5 = Background Light Beige
+                6 = Background Blue
+                7 = Background Light Blue
+                8 = Background White
+                9 = Background Very Light Blue
+            }
+        }
+    }
+}
+
+
+TCEFORM.tt_content.rowDescription {
+    # Add another header_layout option:
+    label = Choose your layout
+}
+
+
+# --- TCEFORM.tt_content ---
+TCEFORM.tt_content {
+    header_layout {
+        # 0 = 1 (H1), 100 hidden
+        removeItems = 0,0
+        #removeItems = 0,100
+        altLabels {
+            1 = H1
+            2 = H2
+            3 = H3
+            4 = H4
+            5 = H5
+        }
+        #addItems.6 = H3 (special)
+    }
+}
+
+# move "mask_" to "common" tab (gridelements not working...)
+mod.wizards.newContentElement.wizardItems {
+    common {
+        elements.mask_text_2cols < mod.wizards.newContentElement.wizardItems.mask.elements.mask_text_2cols
+        elements.mask_box < mod.wizards.newContentElement.wizardItems.mask.elements.mask_box
+        elements.mask_slider < mod.wizards.newContentElement.wizardItems.mask.elements.mask_slider
+        elements.mask_flyer < mod.wizards.newContentElement.wizardItems.mask.elements.mask_flyer
+        elements.mask_map < mod.wizards.newContentElement.wizardItems.mask.elements.mask_map
+        show := addToList(mask_text_2cols, mask_box, mask_slider,mask_flyer,mask_map)
+    }
+    mask.elements.mask_text_2cols >
+    mask.elements.mask_box >
+    mask.elements.mask_slider >
+    mask.elements.mask_flyer >
+    mask.elements.mask_map >
+}
+
+tx_news.templateLayouts {
+    1 = Listenansicht für neuste News
+    2 = Listenansicht Home
+    3 = Listenansicht Übersicht
+    4 = Listenansicht Detail
+    5 = Detail Detail
+}

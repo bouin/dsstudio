@@ -1,0 +1,40 @@
+base: 'https://dsstudio.ddev.site/'
+errorHandling:
+  -
+    errorCode: 404
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=8'
+languages:
+  -
+    title: DE
+    enabled: true
+    locale: de_CH
+    hreflang: de-CH
+    base: /
+    websiteTitle: ''
+    navigationTitle: DE
+    flag: ch
+    languageId: 0
+rootPageId: 1
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    map:
+      /: 0
+      sitemap.xml: 1533906435
+    Sitemap:
+      type: Simple
+      routePath: 'sitemap-type/{sitemap}'
+      aspects:
+        sitemap:
+          type: StaticValueMapper
+          map:
+            pages: pages
+            tx_news: tx_news
+            my_other_sitemap: my_other_sitemap
+routes:
+  -
+    route: robots.txt
+    type: staticText
+    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3_src/\r\nAllow: /typo3/sysext/frontend/Resources/Public/*\r\n"
+websiteTitle: ''

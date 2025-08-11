@@ -1,0 +1,46 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
+
+############
+### PAGE ###
+############
+page {
+    fluidtemplate {
+       layoutRootPath = EXT:site_package/Resources/Private/Layouts/Page/
+       partialRootPath = EXT:site_package/Resources/Private/Partials/Page/
+       templateRootPath = EXT:site_package/Resources/Private/Templates/Page/
+    }
+    meta {
+        description =
+        author =
+        keywords =
+        viewport = width=device-width, initial-scale=1
+        robots = index,follow
+        apple-mobile-web-app-capable = no
+        compatible = IE=edge
+    }
+}
+
+##############
+### CONFIG ###
+##############
+config {
+    #no_cache = 0
+    #removeDefaultJS = 0
+    admPanel = 0
+    prefixLocalAnchors = all
+    headerComment = build by Studio Thom Pfister | Daniel Hackiewicz TYPO3 Developer
+    sendCacheHeaders = 1
+}
+
+##############
+###POWERMAIL##
+##############
+
+styles.content.imgtext.maxW = 1920
+styles.content.imgtext.maxWInText = 1920
+
+styles.content.textmedia.maxW = 1920
+styles.content.textmedia.maxWInText = 1920

@@ -1,0 +1,35 @@
+# TYPO3 core + composer
+/vendor/
+/public/typo3temp/
+/public/_processed_/
+/public/fileadmin/_processed_/
+/public/fileadmin/_temp_/
+/public/fileadmin/_processed_/
+composer.lock
+/var/**
+/var/
+/public/
+
+# Environment
+.env
+/.ddev/.importdb
+/.ddev/db_snapshots/
+.ddev/ssh-auth.json
+
+# TYPO3 config
+/public/typo3conf/LocalConfiguration.php
+/public/typo3conf/AdditionalConfiguration.php
+
+# IDE files
+.idea/
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+Ignore in ignore
+!src/
+!src/**
+
+/src/packages/site_package/Build/node_modules/

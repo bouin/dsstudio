@@ -1,0 +1,17 @@
+plugin.tx_powermail {
+    view {
+        templateRootPaths {
+            10 = EXT:site_package/Resources/Private/powermail/Templates/
+        }
+
+        partialRootPaths {
+            10 = EXT:site_package/Resources/Private/powermail/Partials/
+        }
+
+        layoutRootPaths {
+            10 = EXT:site_package/Resources/Private/powermail/Layouts/
+        }
+    }
+}
+
+

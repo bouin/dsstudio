@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-11-02UTC14:15:260">
+        <header>
+            <authorName>Daniel Hackiewicz</authorName>
+            <authorEmail>dhackiewicz@gmail.com</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="kontakt">
+                <source>Kontakt</source>
+                <target>Kontakt</target>
+            </trans-unit>
+            <trans-unit id="pflege">
+                <source>Gute Pflege heisst:</source>
+                <target>Gute Pflege heisst:</target>
+            </trans-unit>
+            <trans-unit id="head1">
+                <source>Jahresbericht 2023</source>
+                <target>Jahresbericht 2023</target>
+            </trans-unit>
+            <trans-unit id="head2">
+                <source>SPITEX SCHWEIZ</source>
+                <target>SPITEX SCHWEIZ</target>
+            </trans-unit>
+            <trans-unit id="more">
+                <source>Mehr erfahren</source>
+                <target>Mehr erfahren</target>
+            </trans-unit>
+            <trans-unit id="back-link">
+                <source>Zurück</source>
+                <target>Zurück</target>
+            </trans-unit>
+            <trans-unit id="themes">
+                <source>WEITERE THEMEN</source>
+                <target>WEITERE THEMEN</target>
+            </trans-unit>
+            <trans-unit id="legend1">
+                <source>Verbandsleitung/Interessenvertretung</source>
+                <target>Verbandsleitung/Interessenvertretung</target>
+            </trans-unit>
+            <trans-unit id="legend2">
+                <source>Kommunikation/Marketing</source>
+                <target>Kommunikation/Marketing</target>
+            </trans-unit>
+            <trans-unit id="legend3">
+                <source>Qualität</source>
+                <target>Qualität</target>
+            </trans-unit>
+            <trans-unit id="legend4">
+                <source>Bildung</source>
+                <target>Bildung</target>
+            </trans-unit>
+            <trans-unit id="legend5">
+                <source>Produkte/Dienstleistungen</source>
+                <target>Produkte/Dienstleistungen</target>
+            </trans-unit>
+            <trans-unit id="legend6">
+                <source>inter-RAI</source>
+                <target>inter-RAI</target>
+            </trans-unit>
+            <trans-unit id="legend7">
+                <source>AHV-Kurse Haushelferinnen</source>
+                <target>AHV-Kurse Haushelferinnen</target>
+            </trans-unit>
+            <trans-unit id="legend8">
+                <source>Magazin</source>
+                <target>Magazin</target>
+            </trans-unit>
+            <trans-unit id="legend9">
+                <source>Projekte</source>
+                <target>Projekte</target>
+            </trans-unit>
+            <trans-unit id="graph1">
+                <source>Herkunft der Mittel</source>
+                <target>Herkunft der Mittel</target>
+            </trans-unit>
+            <trans-unit id="graph2">
+                <source>Verwendung der Mittel</source>
+                <target>Verwendung der Mittel</target>
+            </trans-unit>
+            <trans-unit id="graph1">
+                <source>Herkunft der Mittel</source>
+                <target>Herkunft der Mittel</target>
+            </trans-unit>
+            <trans-unit id="graph2">
+                <source>Verwendung der Mittel</source>
+                <target>Verwendung der Mittel</target>
+            </trans-unit>
+            <trans-unit id="legend11">
+                <source>Sponsoring / Werbung / Verkäufe</source>
+                <target>Sponsoring / Werbung / Verkäufe</target>
+            </trans-unit>
+            <trans-unit id="legend22">
+                <source>Spenden</source>
+                <target>Spenden</target>
+            </trans-unit>
+            <trans-unit id="legend33">
+                <source>Beiträge des Ausgleichsfonds der AHV gemäss Art. 101 bis AHVG</source>
+                <target>Beiträge des Ausgleichsfonds der AHV gemäss Art. 101 bis AHVG</target>
+            </trans-unit>
+            <trans-unit id="legend44">
+                <source>Beiträge des Ausgleichsfonds der AHV gemäss Art. 101 bis AHVG für Projekte</source>
+                <target>Beiträge des Ausgleichsfonds der AHV gemäss Art. 101 bis AHVG für Projekte</target>
+            </trans-unit>
+            <trans-unit id="legend55">
+                <source>Beiträge des Ausgleichsfonds der AHV gemäss Art. 101 bis AHVG für Kurse HaushelferInnen</source>
+                <target>Beiträge des Ausgleichsfonds der AHV gemäss Art. 101 bis AHVG für Kurse HaushelferInnen</target>
+            </trans-unit>
+            <trans-unit id="legend66">
+                <source>Beitrag Bund/Kanton</source>
+                <target>Beitrag Bund/Kanton</target>
+            </trans-unit>
+            <trans-unit id="legend77">
+                <source>Mitgliederbeiträge</source>
+                <target>Mitgliederbeiträge</target>
+            </trans-unit>
+            <trans-unit id="kontakt">
+                <source>KONTAKT</source>
+                <target>KONTAKT</target>
+            </trans-unit>
+            <trans-unit id="premium">
+                <source>Premiumpartner</source>
+                <target>Premiumpartner</target>
+            </trans-unit>
+            <trans-unit id="partner">
+                <source>Partner</source>
+                <target>Partner</target>
+            </trans-unit>
+            <trans-unit id="statistics">
+                <source>ALLE STATISTIKEN</source>
+                <target>ALLE STATISTIKEN</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

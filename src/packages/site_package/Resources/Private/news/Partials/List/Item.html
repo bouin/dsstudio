@@ -1,0 +1,210 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<!--Partials/List/Item.html-->
+	<n:excludeDisplayedNews newsItem="{newsItem}"/>
+
+	<!--LAYOUT 3-->
+	<f:if condition="{settings.templateLayout}==3">
+		<f:then>
+			<f:if condition="{newsItem.mediaPreviews}">
+				<!-- media preview element -->
+				<f:then>
+					<div class="col-6 col-md-6 col-xxl-4 mb-4 news-bck-col">
+						<n:link newsItem="{newsItem}" settings="{settings}">
+							<div class="row">
+								<div class="col-12">
+									<div class="news-img">
+										<f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
+											<f:if condition="{mediaElement.originalResource.type} == 2">
+												<div class="vimage link2">
+													<f:image class="w-100 h-auto" image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" loading="{settings.list.media.image.lazyLoading}" width="1330c" height="882c"/>
+												</div>
+											</f:if>
+											<f:if condition="{mediaElement.originalResource.type} == 5">
+												<div class="vimage link4">
+													<f:image class="w-100 h-auto" image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" loading="{settings.list.media.image.lazyLoading}" width="1330c" height="882c"/>
+												</div>
+											</f:if>
+										</f:alias>
+									</div>
+									<div class="card-body card-body-color{iterator.cycle} d-flex flex-column justify-content-between">
+										<!-- header -->
+										<div class="header padd-30-news ">
+											<div class="small">
+												<f:if condition="{newsItem.notes}">
+													<span class="notes">{newsItem.notes}</span>
+												</f:if>
+											</div>
+										</div>
+										<div>
+											<f:if condition="{newsItem.teaser}">
+												<p class="news-list-item" style="margin-bottom:0.5rem">{newsItem.teaser}</p>
+											</f:if>
+											<div class="headline">
+												<h3 class="font-headline">
+													{newsItem.title}
+												</h3>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</n:link>
+					</div>
+					<!--END LAYOUT 3-->
+				</f:then>
+				<f:else>
+					<!--NO IMAGE-->
+					<div class="col-6 col-md-6 col-xxl-4 mb-4 ">
+
+						<n:link newsItem="{newsItem}" settings="{settings}">
+							<div class="row">
+								<div class="col-12 ">
+									<div class="news-img card-body-color{iterator.cycle}">
+										<div class="vimage link2 position-relative">
+											<f:image class="w-100 h-auto" src="EXT:site_package/Resources/Public/Images/placeholder.png" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" loading="{settings.list.media.image.lazyLoading}" width="1330c" height="882c"/>
+											<div class="small position-absolute ifabsolute">
+												<f:if condition="{newsItem.notes}">
+													<span class="notes">{newsItem.notes}</span>
+												</f:if>
+											</div>
+										</div>
+
+									</div>
+									<div class="card-body card-body-color{iterator.cycle} d-flex flex-column justify-content-between">
+										<!-- header -->
+										<div class="header padd-30-news ">
+
+										</div>
+										<div>
+
+											<div class="headline">
+												<h3 class="font-headline">
+													{newsItem.title}
+												</h3>
+											</div>
+											<f:if condition="{newsItem.teaser}">
+												<p class="news-list-item" style="margin-bottom:0.5rem">{newsItem.teaser}</p>
+											</f:if>
+										</div>
+									</div>
+								</div>
+							</div>
+						</n:link>
+					</div>
+				</f:else>
+			</f:if>
+		</f:then>
+		<f:else>
+
+
+
+
+
+			<f:if condition="{newsItem.mediaPreviews}">
+				<!-- media preview element -->
+				<f:then>
+					<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" additionalAttributes="{itemprop:'url'}">
+					<div class="row">
+						<div class="col-12">
+							<div class="news-img">
+								<f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
+									<f:if condition="{mediaElement.originalResource.type} == 2">
+										<div class="vimage link2">
+											<f:image class="w-100 h-auto" image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" loading="{settings.list.media.image.lazyLoading}" width="1330c" height="882c"/>
+										</div>
+									</f:if>
+									<f:if condition="{mediaElement.originalResource.type} == 5">
+										<div class="vimage link4">
+											<f:image class="w-100 h-auto" image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" loading="{settings.list.media.image.lazyLoading}" width="1330c" height="882c"/>
+										</div>
+									</f:if>
+								</f:alias>
+							</div>
+						</div>
+					</div>
+					<div class="card-body card-body-color{iterator.cycle}  d-flex flex-column justify-content-between">
+						<!-- header -->
+						<div class="header padd-30-news ">
+							<div class="small">
+								<f:if condition="{newsItem.notes}">
+									<span class="notes">{newsItem.notes}</span>
+								</f:if>
+							</div>
+						</div>
+						<div>
+							<div class="headline">
+								<h3 class="font-headline">
+									{newsItem.title}
+								</h3>
+							</div>
+							<f:if condition="{newsItem.teaser}">
+								<p class="news-list-item" style="margin-bottom:0.5rem">{newsItem.teaser}</p>
+							</f:if>
+
+						</div>
+
+					</div>
+					</n:link>
+				</f:then>
+				<f:else>
+					<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" additionalAttributes="{itemprop:'url'}">
+					<!--NO IMAGE-->
+					<div class="row">
+						<div class="col-12">
+							<div class="news-img card-body-color{iterator.cycle}">
+								<div class="vimage link2 position-relative">
+									<f:image class="w-100 h-auto" src="EXT:site_package/Resources/Public/Images/placeholder.png" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" loading="{settings.list.media.image.lazyLoading}" width="1330c" height="882c"/>
+									<div class="small position-absolute ifabsolute">
+										<f:if condition="{newsItem.notes}">
+											<span class="notes">{newsItem.notes}</span>
+										</f:if>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="card-body card-body-color{iterator.cycle}  d-flex flex-column justify-content-between">
+						<f:if condition="{settings.templateLayout}==5">
+							<f:then>
+								<!-- header -->
+								<div class="header">
+
+									<h5 class="font-headline font-16 font-regular line-height-lg">
+										{newsItem.title}
+									</h5>
+									<f:if condition="{newsItem.teaser}">
+										<p class="news-list-item-small-teaser">{newsItem.teaser}</p>
+									</f:if>
+								</div>
+							</f:then>
+							<f:else>
+								<!-- header -->
+								<div class="header padd-30-news ">
+									<div class="small">
+
+									</div>
+								</div>
+								<div>
+
+									<div class="headline">
+										<h3 class="font-headline">
+											{newsItem.title}
+										</h3>
+									</div>
+									<f:if condition="{newsItem.teaser}">
+										<p class="news-list-item" style="margin-bottom:0.5rem">{newsItem.teaser}</p>
+									</f:if>
+								</div>
+							</f:else>
+						</f:if>
+					</div>
+					</n:link>
+				</f:else>
+			</f:if>
+		</f:else>
+	</f:if>
+
+</html>

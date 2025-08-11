@@ -1,0 +1,89 @@
+
+    <f:if condition="{data.uid}==1">
+        <f:then>
+            <header class="hedo">
+                <!--MENU-->
+                <nav class="navbar navbar-expand-lg navbar-light ps-md-4 pe-md-4 changenr1 fixed-top" id="nav-nav-ok" style="margin-top: 0px;">
+                    <div class="container-fluid justify-content-end align-items-end">
+                        <div class="row ">
+                            <div class="col-12 from-here">
+                                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+                                    <div id="nav-icon" class="mobile-margin">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                                        <f:cObject typoscriptObjectPath="lib.mainNavigation"></f:cObject>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!--MENU-->
+                <div class="container-fluid h-100 pl-4 pb-5 pt-5 pt-md-0 pr-4">
+                    <div class="row h-100">
+                        <div class="col-12 d-flex justify-content-center align-items-center align-items-md-end">
+                            <f:link.page pageUid="1" class="w-100">
+                                <f:image src="EXT:site_package/Resources/Public/Images/david-logo.svg" style="height:auto!important" class="w-100 h-auto "></f:image>
+                                <!--<f:image src="EXT:site_package/Resources/Public/Images/david-logo-mobile.svg" style="height:auto!important;width:200px!important;margin:auto;" class="w-100 h-auto d-block d-md-none"></f:image>-->
+                            </f:link.page>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </f:then>
+        <f:else>
+            <div class="header">
+                <!--MENU-->
+                <nav class="navbar navbar-expand-lg navbar-light ps-md-4 pe-md-4 changenr1 fixed-top" id="nav-nav-ok" style="margin-top: 0px;">
+                    <div class="container-fluid justify-content-end align-items-end">
+                        <div class="row ">
+                            <div class="col-12 from-here">
+                                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+                                    <div id="nav-icon" class="mobile-margin">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                                        <ul class="navbar-nav mb-2 mb-lg-0 d-block d-lg-flex text-center text-lg-left  w-100">
+                                            <li class="nav-item">
+                                                <a href="https://www.davidschaererstudio.com/#c9" class="nav-link">Angebot</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="https://www.davidschaererstudio.com/#c15" class="nav-link">Erfahrung</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="https://www.davidschaererstudio.com/#c39" class="nav-link">Team</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="https://www.davidschaererstudio.com/#c41" class="nav-link">Klienten</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="https://www.davidschaererstudio.com/#footer_kontakt" class="nav-link">Kontakt</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!--MENU-->
+                <div class="container-fluid h-100 pl-4 pb-5 pt-5 pt-md-0 pr-4">
+                    <div class="row h-100">
+                        <div class="col-12 d-flex justify-content-center align-items-end">
+                            <f:link.page pageUid="1" class="w-100">
+                                <f:image src="EXT:site_package/Resources/Public/Images/david-logo.svg" style="height:auto!important" class="w-100 h-auto"></f:image>
+                            </f:link.page>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </f:else>
+    </f:if>
+

@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <f:variable name="bckcolor" value="{data.tx_mask_bckcolor}"/>
+    <f:variable name="fontcolor" value="{data.tx_mask_fontcolor}"/>
+    <div id="c{data.uid}" class="bck-{bckcolor} font-{fontcolor}  mask-element frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+        <div class="">
+            <div class="row g-0">
+                <div class="col-12 col-md-7 ">
+                    <f:if condition="{data.tx_mask_slideimage}">
+                        <f:for each="{data.tx_mask_slideimage}" as="file">
+                            <f:image image="{file}" width="1920" class="w-100 h-auto"/>
+                        </f:for>
+                    </f:if>
+                </div>
+                <div class="col-12 col-md-5 padding-around d-flex align-content-center justify-content-center flex-column text-center">
+                    <f:if condition="{data.tx_mask_slide_text}">
+                        <div>
+                            <h1>
+                                <f:format.stripTags allowedTags="<em><br>">
+                                    {data.tx_mask_slide_text -> f:format.html()}
+                                </f:format.stripTags>
+                            </h1>
+                        </div>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+</f:spaceless>
+</html>

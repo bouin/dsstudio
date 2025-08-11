@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="de" datatype="plaintext" original="messages" date="2020-11-02UTC14:15:260">
+        <header>
+            <authorName>Daniel Hackiewicz</authorName>
+            <authorEmail>dhackiewicz@gmail.com</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="pflege">
+                <target>LA QUALITÉ DES SOINS, C'EST :</target>
+            </trans-unit>
+            <trans-unit id="kontakt">
+                <target>Contact</target>
+            </trans-unit>
+            <trans-unit id="head1">
+                <target>Rapport annuel 2023</target>
+            </trans-unit>
+            <trans-unit id="head2">
+                <target>Aide et soins à domicile Suisse</target>
+            </trans-unit>
+            <trans-unit id="more">
+                <target>En savoir plus</target>
+            </trans-unit>
+            <trans-unit id="back-link">
+                <target>Retour</target>
+            </trans-unit>
+            <trans-unit id="themes">
+                <target>AUTRES SUJETS</target>
+            </trans-unit>
+            <trans-unit id="legend1">
+                <target>Verbandsleitung/Interessenvertretung</target>
+            </trans-unit>
+            <trans-unit id="legend2">
+                <target>Kommunikation/Marketing</target>
+            </trans-unit>
+            <trans-unit id="legend3">
+                <target>Qualität</target>
+            </trans-unit>
+            <trans-unit id="legend4">
+                <target>Bildung</target>
+            </trans-unit>
+            <trans-unit id="legend5">
+                <target>Produkte/Dienstleistungen</target>
+            </trans-unit>
+            <trans-unit id="legend6">
+                <target>inter-RAI</target>
+            </trans-unit>
+            <trans-unit id="legend7">
+                <target>AHV-Kurse Haushelferinnen</target>
+            </trans-unit>
+            <trans-unit id="legend8">
+                <target>Magazin</target>
+            </trans-unit>
+            <trans-unit id="legend9">
+                <target>Projekte</target>
+            </trans-unit>
+            <trans-unit id="graph1">
+                <target>Herkunft der Mittel</target>
+            </trans-unit>
+            <trans-unit id="graph2">
+                <target>Verwendung der Mittel</target>
+            </trans-unit>
+            <trans-unit id="legend11">
+                <target>Sponsoring / Werbung / Verkäufe</target>
+            </trans-unit>
+            <trans-unit id="legend22">
+                <target>Spenden</target>
+            </trans-unit>
+            <trans-unit id="legend33">
+                <target>Beiträge des Ausgleichsfonds der AHV gemäss Art. 101 bis AHVG</target>
+            </trans-unit>
+            <trans-unit id="legend44">
+                <target>Beiträge des Ausgleichsfonds der AHV gemäss Art. 101 bis AHVG für Projekte</target>
+            </trans-unit>
+            <trans-unit id="legend55">
+                <target>Beiträge des Ausgleichsfonds der AHV gemäss Art. 101 bis AHVG für Kurse HaushelferInnen</target>
+            </trans-unit>
+            <trans-unit id="legend66">
+                <target>Beitrag Bund/Kanton</target>
+            </trans-unit>
+            <trans-unit id="legend77">
+                <target>Mitgliederbeiträge</target>
+            </trans-unit>
+            <trans-unit id="kontakt">
+                <target>CONTACT</target>
+            </trans-unit>
+            <trans-unit id="premium">
+                <target>Partenaire premium</target>
+            </trans-unit>
+            <trans-unit id="partner">
+                <target>Partenaire</target>
+            </trans-unit>
+            <trans-unit id="statistics">
+                <target>TOUTES LES STATISTIQUES</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

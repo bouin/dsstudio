@@ -1,0 +1,28 @@
+
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <div id="c{data.uid}" class="font-grey padding-top-3 padding-bottom-3 mask-element frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+        <div class="container">
+                <f:if condition="{data.tx_mask_gallery}">
+                    <div class="pswp-gallery pswp-gallery--single-column row" id="gallery-started">
+                        <f:for each="{data.tx_mask_gallery}" as="data_item">
+                            <f:if condition="{data_item.tx_mask_image_gallery}">
+                                <f:for each="{data_item.tx_mask_image_gallery}" as="file">
+                                    <a href="fileadmin/{file.originalFile.identifier}"
+                                       data-pswp-width="1920"
+                                       data-pswp-height="1343"
+                                       target="_blank" class="col-12 col-md-6 mb-4">
+                                        <div class="green-back-around">
+                                            <f:image image="{file}" width="800" class="w-100 h-auto" />
+                                        </div>
+                                    </a>
+                                </f:for>
+                            </f:if>
+                        </f:for>
+                    </div>
+                </f:if>
+        </div>
+    </div>
+</f:spaceless>
+</html>
+

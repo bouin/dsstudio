@@ -1,0 +1,130 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <div id="c{data.uid}" class="font-grey font-19 padding-top-130 padding-bottom-130 mask-element frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-12 col-lg-12 col-xl-10">
+                    <div class="justify-content-between d-flex flex-column flex-lg-row smaller-one">
+                        <div class="one-padding pb-5 pb-lg-0">
+                            <f:if condition="{data.tx_mask_title}">
+                                <span class="font-25 font-larken">
+                                    {data.tx_mask_title}
+                                </span>
+                            </f:if>
+                        </div>
+                        <div class="one-padding line-heigt-more d-none d-lg-block">
+                            <f:if condition="{data.tx_mask_openinghours}">
+                                <p>
+                                    <f:for each="{data.tx_mask_openinghours}" as="data_item">
+                                            <f:if condition="{data_item.tx_mask_days}">
+                                                <span class="font-larken-medium pe-3">
+                                                    {data_item.tx_mask_days}
+                                                </span>
+                                            </f:if>
+                                            <f:if condition="{data_item.tx_mask_hours}">
+                                                {data_item.tx_mask_hours}
+                                            </f:if>
+                                        <br>
+                                    </f:for>
+                                </p>
+                            </f:if>
+                        </div>
+                        <div class="one-padding line-heigt-more d-none d-lg-block">
+                            <p>
+                            <f:if condition="{data.tx_mask_phone_word}">
+                                <span class="font-larken-medium pe-3">
+                                    {data.tx_mask_phone_word}
+                                </span>
+                            </f:if>
+                            <f:if condition="{data.tx_mask_phone_number}">
+                                <a href="tel:{data.tx_mask_phone_number}">{data.tx_mask_phone_number}</a>
+                            </f:if>
+                            <br>
+                            <f:if condition="{data.tx_mask_email_word}">
+                                <span class="font-larken-medium pe-3">
+                                    {data.tx_mask_email_word}
+                                </span>
+                            </f:if>
+                            <f:if condition="{data.tx_mask_email_adress}">
+                                <f:link.email email="{data.tx_mask_email_adress}">{data.tx_mask_email_adress}</f:link.email>
+                            </f:if>
+                            <br>
+                            <f:if condition="{data.tx_mask_reservation}">
+                                <span class="font-larken-medium pe-3">
+                                    {data.tx_mask_reservation}
+                                </span>
+                            </f:if>
+
+                            <f:if condition="{data.tx_mask_link_for_reseravtion}">
+                                <f:link.typolink parameter="{data.tx_mask_link_for_reseravtion}" class="scrollme">
+                                    <f:if condition="{data.tx_mask_reservation_button}">
+                                            {data.tx_mask_reservation_button}
+                                    </f:if>
+                                </f:link.typolink>
+                            </f:if>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="justify-content-between d-flex flex-column flex-md-row smaller-one">
+                        <div class="one-padding line-heigt-more d-block d-lg-none pb-4">
+                            <f:if condition="{data.tx_mask_openinghours}">
+                                <p>
+                                    <f:for each="{data.tx_mask_openinghours}" as="data_item">
+                                        <f:if condition="{data_item.tx_mask_days}">
+                                                <span class="font-larken-medium pe-3">
+                                                    {data_item.tx_mask_days}
+                                                </span>
+                                        </f:if>
+                                        <f:if condition="{data_item.tx_mask_hours}">
+                                            {data_item.tx_mask_hours}
+                                        </f:if>
+                                        <br>
+                                    </f:for>
+                                </p>
+                            </f:if>
+                        </div>
+                        <div class="one-padding line-heigt-more d-block d-lg-none">
+                            <p>
+                                <f:if condition="{data.tx_mask_phone_word}">
+                                <span class="font-larken-medium pe-3">
+                                    {data.tx_mask_phone_word}
+                                </span>
+                                </f:if>
+                                <f:if condition="{data.tx_mask_phone_number}">
+                                    <a href="tel:{data.tx_mask_phone_number}">{data.tx_mask_phone_number}</a>
+                                </f:if>
+                                <br>
+                                <f:if condition="{data.tx_mask_email_word}">
+                                <span class="font-larken-medium pe-3">
+                                    {data.tx_mask_email_word}
+                                </span>
+                                </f:if>
+                                <f:if condition="{data.tx_mask_email_adress}">
+                                    <f:link.email email="{data.tx_mask_email_adress}">{data.tx_mask_email_adress}</f:link.email>
+                                </f:if>
+                                <br>
+                                <f:if condition="{data.tx_mask_reservation}">
+                                <span class="font-larken-medium pe-3">
+                                    {data.tx_mask_reservation}
+                                </span>
+                                </f:if>
+
+                                <f:if condition="{data.tx_mask_link_for_reseravtion}">
+                                    <f:link.typolink parameter="{data.tx_mask_link_for_reseravtion}" class="scrollme">
+                                        <f:if condition="{data.tx_mask_reservation_button}">
+                                            {data.tx_mask_reservation_button}
+                                        </f:if>
+                                    </f:link.typolink>
+                                </f:if>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</f:spaceless>
+</html>
+
+

@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-10 row-upper pb-15 text-indent">
+            <f:if condition="{data.tx_mask_first_row}">
+                {data.tx_mask_first_row -> f:format.html()}
+            </f:if>
+        </div>
+        <div class="col-12 col-md-8 font-15 pb-15">
+            <f:if condition="{data.tx_mask_second_row}">
+                {data.tx_mask_second_row -> f:format.html()}
+            </f:if>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-11 offset-1 offset-md-3 col-md-8 font-15">
+            <div class="pe-2">
+                <f:if condition="{data.tx_mask_third_row}">
+                    {data.tx_mask_third_row -> f:format.html()}
+                </f:if>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 offset-0 offset-md-3 col-md-9 px-0">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6 font-15">
+                        <f:if condition="{data.tx_mask_first_col}">
+                            <f:format.raw>{data.tx_mask_first_col -> f:format.html()}</f:format.raw>
+                        </f:if>
+                    </div>
+                    <div class="col-12 col-md-6 font-15">
+                        <f:if condition="{data.tx_mask_second_col}">
+                            <f:format.raw>{data.tx_mask_second_col}</f:format.raw>
+                        </f:if>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

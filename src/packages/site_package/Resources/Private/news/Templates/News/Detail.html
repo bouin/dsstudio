@@ -1,0 +1,156 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  xmlns:rx="http://typo3.org/ns/Reelworx/RxShariff/ViewHelper"
+	  data-namespace-typo3-fluid="true">
+
+<f:layout name="Detail" />
+
+<!--News/Detail.html-->
+<f:section name="content">
+	<f:if condition="{newsItem}">
+		<f:then>
+			<n:format.nothing>
+				<n:excludeDisplayedNews newsItem="{newsItem}" />
+				<f:if condition="{settings.detail.showMetaTags}">
+					<f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}" />
+				</f:if>
+				<f:if condition="{newsItem.alternativeTitle}">
+					<f:then>
+						<n:titleTag>
+							<f:format.htmlentitiesDecode>{newsItem.alternativeTitle}</f:format.htmlentitiesDecode>
+						</n:titleTag>
+					</f:then>
+					<f:else>
+						<n:titleTag>
+							<f:format.htmlentitiesDecode>{newsItem.title}</f:format.htmlentitiesDecode>
+						</n:titleTag>
+					</f:else>
+				</f:if>
+			</n:format.nothing>
+
+			<div class="detail-news-news">
+				<!--<div class="row justify-content-center">
+					<div class="col-12 col-md-10">-->
+						<div class="header">
+							<!--Media Container-->
+							<div class="ps-4 pe-4">
+								<f:render partial="Detail/MediaContainer" arguments="{media: newsItem.mediaNonPreviews, settings:settings}" />
+							</div>
+							<div class="container">
+								<div class="row justify-content-center">
+									<div class="col-12 col-md-10 ">
+										<f:if condition="{newsItem.teaser}">
+											<!-- teaser -->
+											<div class="teaser-text detail-news d-flex " itemprop="description">
+												<p class="date-space">
+												</p>
+												<f:format.html>{newsItem.teaser}</f:format.html>
+											</div>
+										</f:if>
+									</div>
+								</div>
+							</div>
+							<div class="container pt-100 pb-80">
+								<div class="row d-flex flex-row">
+									<div class="col-8 col-md-7 small-text-edit">
+										<f:if condition="{newsItem.notes}">
+											{newsItem.notes}
+										</f:if>
+									</div>
+									<div class="col-4 col-md-5 d-flex justify-content-end align-self-start accordion-button-new">
+										<f:if condition="{settings.backPid}">
+											<!-- Link Back -->
+											<f:link.page pageUid="{settings.backPid}" class="button-newso">
+												<span class="icon"></span>
+												<f:translate key="back-link" extensionName="site_package"/>
+											</f:link.page>
+										</f:if>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-10 col-md-7 text-caps text-left ">
+										<h2>
+											<f:format.stripTags allowedTags="<br>">
+												<f:if condition="{newsItem.title}">
+													<f:format.raw>{newsItem.title}</f:format.raw>
+												</f:if>
+											</f:format.stripTags>
+										</h2>
+									</div>
+
+								</div>
+							</div>
+							<!-- main text -->
+							<f:if condition="{newsItem.bodytext}">
+								<div class="container">
+									<div class="row justify-content-center">
+										<div class="col-12 col-md-8 col-lg-8">
+											<div class="news-text-wrap lead" itemprop="articleBody">
+												<f:format.html>{newsItem.bodytext}</f:format.html>
+											</div>
+										</div>
+									</div>
+								</div>
+							</f:if>
+						</div>
+						<n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper" audioClass="audio-wrapper">
+
+									<f:if condition="{newsItem.contentElements}">
+										<!-- content elements -->
+										<f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
+
+									</f:if>
+
+						</n:renderMedia>
+						<f:if condition="{settings.backPid}">
+							<!-- Link Back -->
+							<div class="container">
+								<div class="row justify-content-center">
+									<div class="col-12 col-md-8">
+										<div class="d-flex justify-content-start align-self-start accordion-button-new">
+											<f:if condition="{settings.backPid}">
+												<!-- Link Back -->
+												<f:link.page pageUid="{settings.backPid}" class="button-newso">
+													<span class="icon"></span>
+													<f:translate key="back-link" extensionName="site_package" />
+												</f:link.page>
+											</f:if>
+										</div>
+									</div>
+								</div>
+							</div>
+						</f:if>
+
+						<!-- related things -->
+						<div class="news-related-wrap">
+							<f:if condition="{newsItem.allRelatedSorted}">
+								<!-- Related news records -->
+								<div class="news-related news-related-news">
+									<h4>
+										<f:translate key="related-news" />
+									</h4>
+									<ul>
+										<f:for each="{newsItem.allRelatedSorted}" as="related">
+											<li>
+												<span class="news-related-news-date"><f:format.date format="{f:translate(key:'dateFormat')}">{related.datetime}</f:format.date></span>
+												<n:link newsItem="{related}" settings="{settings}" title="{related.title}">
+													{related.title}
+												</n:link>
+											</li>
+										</f:for>
+									</ul>
+								</div>
+							</f:if>
+						</div>
+					</div>
+				<!--</div>
+			</div>-->
+
+	</f:then>
+	<f:else>
+
+	</f:else>
+
+	</f:if>
+</f:section>
+</html>

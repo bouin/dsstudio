@@ -1,0 +1,48 @@
+<div class="container pt-50">
+    <div class="row justify-content-center justify-content-md-end">
+        <div class="col-8 col-md-4">
+            <f:for each="{data.tx_mask_image_portrait}" as="file">
+                <f:image image="{file}" width="800" class="w-100 h-auto" />
+            </f:for>
+            <div class="container-fluid">
+                <div class="row justify-contend-start justify-contend-lg-between">
+                    <div class="col-12 col-lg-5 px-0 font-12 pt-1">
+                        <f:if condition="{data.tx_mask_portrait_1_text_below}">
+                            {data.tx_mask_portrait_1_text_below}
+                        </f:if>
+                    </div>
+                    <div class="col-12 col-lg-7 px-0 font-12 pt-0 pt-lg-1 d-flex justify-content-start justify-content-lg-end">
+                        <f:if condition="{data.tx_mask_portrait_seond_text_below}">
+                            {data.tx_mask_portrait_seond_text_below}
+                        </f:if>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-7 pt-5 pt-md-0">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-8 px-0">
+                        <f:if condition="{data.tx_mask_under_the_image_main_text}">
+                            {data.tx_mask_under_the_image_main_text -> f:format.html()}
+                        </f:if>
+                    </div>
+                </div>
+            </div>
+            <f:if condition="{data.tx_mask_section_with_keywords}">
+                <div class="pt-10">
+                    <f:for each="{data.tx_mask_section_with_keywords}" as="data_item">
+                        <div class="button-dave">
+                                <f:if condition="{data_item.tx_mask_keyowrd_item}">
+                                    {data_item.tx_mask_keyowrd_item}
+                                </f:if>
+                        </div>
+                    </f:for>
+                </div>
+            </f:if>
+        </div>
+    </div>
+</div>
+
+

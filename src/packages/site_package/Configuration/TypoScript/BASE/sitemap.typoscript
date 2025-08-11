@@ -1,0 +1,24 @@
+plugin.tx_seo {
+  config {
+    xmlSitemap {
+      sitemaps {
+        pages {
+          config {
+            #excludedDoktypes = 137, 138
+            additionalWhere = AND (no_index = 0 OR no_follow = 0)
+            #rootPage = <optionally specify a different root page. (default: rootPageId from site configuration)>
+            #excludePagesRecursive = <commaseparated list of pids>
+          }
+        }
+      }
+    }
+  }
+}
+
+#For YAML
+#routeEnhancers:
+#  PageTypeSuffix:
+#    type: PageType
+#    map:
+#      /: 0
+#      sitemap.xml: 1533906435

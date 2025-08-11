@@ -1,0 +1,58 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <div id="c{data.uid}" class="font-darkred visit-element mask-element frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+        <div class="container">
+            <div class="row justify-content-center g-0">
+                <div class="col-12 col-md-5 padding-around pt-0 pb-0 d-flex align-content-between justify-content-between flex-column text-center text-col">
+                    <div class="">
+                        <f:if condition="{data.tx_mask_visit_headline}">
+                        <span class="like-h2">
+                            {data.tx_mask_visit_headline -> f:format.html()}
+                        </span>
+                        </f:if>
+                    </div>
+                    <div>
+                        <f:if condition="{data.tx_mask_visit_text}">
+                            {data.tx_mask_visit_text -> f:format.html()}
+                        </f:if>
+
+                        <f:if condition="{data.tx_mask_visit_link}">
+                            <f:link.typolink parameter="{data.tx_mask_visit_link}">
+                                <f:if condition="{data.tx_mask_visit_button}">
+                                    <span class="text-uppercase link-line">
+                                        {data.tx_mask_visit_button}
+                                    </span>
+                                </f:if>
+                            </f:link.typolink>
+                        </f:if>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-7">
+                    <div class="row g-0">
+                        <div class="col-12 col-md-6">
+                            <f:if condition="{data.tx_mask_visit_first_image}">
+                                <f:for each="{data.tx_mask_visit_first_image}" as="file">
+                                    <f:image image="{file}" width="1200" class="w-100 h-auto"/>
+                                </f:for>
+                            </f:if>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <f:if condition="{data.tx_mask_visit_second_image}">
+                                <f:for each="{data.tx_mask_visit_second_image}" as="file">
+                                    <f:image image="{file}" width="1200" class="w-100 h-auto" />
+                                    {file.description}
+                                </f:for>
+                            </f:if>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</f:spaceless>
+</html>
+
+

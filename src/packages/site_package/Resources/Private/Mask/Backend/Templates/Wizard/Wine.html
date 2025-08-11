@@ -1,0 +1,42 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <div id="c{data.uid}" class="font-beige wine-element mask-element frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+        <div class="container">
+            <div class="row justify-content-center g-0">
+                    <f:if condition="{data.tx_mask_wine_image}">
+                        <f:for each="{data.tx_mask_wine_image}" as="file">
+                            <div class="col-12 col-md-5 image-as-bck md-image-size-couse-missing-height" style="background-image: url(/fileadmin{file.originalFile.identifier})">
+                        </f:for>
+                    </f:if>
+                </div>
+                <div class="col-12 col-md-6 bck-dark-red padding-around-8 d-flex align-items-center justify-content-center flex-column text-center">
+                    <f:if condition="{data.tx_mask_wine_headline}">
+                        <span class="like-h2">
+                            {data.tx_mask_wine_headline -> f:format.html()}
+                        </span>
+                    </f:if>
+                    <f:if condition="{data.tx_mask_wine_text}">
+                        {data.tx_mask_wine_text -> f:format.html()}
+                    </f:if>
+
+                    <f:if condition="{data.tx_mask_wine_link}">
+                        <f:link.typolink parameter="{data.tx_mask_wine_link}">
+
+                            <f:if condition="{data.tx_mask_wine_button_text}">
+                                <span class="text-uppercase">
+                                    {data.tx_mask_wine_button_text}
+                                </span>
+                            </f:if>
+
+                        </f:link.typolink>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</f:spaceless>
+</html>
+

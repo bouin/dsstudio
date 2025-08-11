@@ -1,0 +1,97 @@
+lib.impressum = COA
+lib.impressum {
+    entryLevel = 0
+    expAll = 1
+    20 = HMENU
+    20 {
+        special = list
+        special.value = 4
+        entryLevel = 0
+        1 = TMENU
+        1 {
+            expAll = 1
+            NO = 1
+            NO.allWrap = <span class="nav-foot">|</span>
+            NO.ATagParams.insertData = 1
+
+            ACT = 1
+            ACT < .NO
+            CUR = 1
+            CUR < .NO
+        }
+    }
+}
+
+lib.disclaimer = COA
+lib.disclaimer {
+    entryLevel = 0
+    expAll = 1
+    10 = HMENU
+    10 {
+        special = list
+        special.value = 3
+        entryLevel = 0
+        1 = TMENU
+        1 {
+            expAll = 1
+            NO = 1
+            NO.allWrap = <span class="nav-foot">|</span>
+            NO.ATagParams.insertData = 1
+
+            ACT = 1
+            ACT < .NO
+            CUR = 1
+            CUR < .NO
+        }
+    }
+}
+
+lib.footer1 = CONTENT
+lib.footer1 {
+    table = tt_content
+    select {
+        orderBy = sorting
+        pidInList = 2
+        where = uid = 1
+    }
+}
+
+lib.footer2 = CONTENT
+lib.footer2 {
+    table = tt_content
+    select {
+        orderBy = sorting
+        pidInList = 2
+        where = uid = 2
+    }
+}
+lib.footernew = CONTENT
+lib.footernew {
+    table = tt_content
+    select {
+        orderBy = sorting
+        pidInList = 2
+        where = uid = 27
+    }
+}
+
+lib.footer3 = CONTENT
+lib.footer3 {
+    table = tt_content
+    select {
+        orderBy = sorting
+        pidInList = 2
+        where = uid = 3
+    }
+}
+
+lib.footer4 = CONTENT
+lib.footer4 {
+    table = tt_content
+    select {
+        orderBy = sorting
+        pidInList = 2
+        where = uid = 4
+    }
+}
+

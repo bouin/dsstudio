@@ -1,0 +1,78 @@
+{
+  "name": "danielhackiewicz/typo3",
+  "description": "TYPO3 Page | Made with ♥ by Dani – Studio Thom Pfister",
+  "type": "project",
+  "minimum-stability": "stable",
+  "repositories": [
+      {
+        "type": "path",
+        "url": "src/packages/*/"
+      }
+    ],
+  "license": "GPL-2.0-or-later",
+  "config": {
+    "platform": {
+      "php": "8.1"
+    },
+    "allow-plugins": {
+      "typo3/cms-composer-installers": true,
+      "typo3/class-alias-loader": true
+    }
+  },
+  "authors": [{
+    "name": "Daniel",
+    "email": "dhackiewicz@gmail.com"
+  }],
+  "require": {
+    "typo3/cms-core": "^12.4.8",
+    "typo3/cms-lowlevel": "^12.4.8",
+    "typo3/cms-adminpanel": "^12.4.8",
+    "typo3/cms-backend": "^12.4.8",
+    "typo3/cms-belog": "^12.4.8",
+    "typo3/cms-beuser": "^12.4.8",
+    "typo3/cms-extbase": "^12.4.8",
+    "typo3/cms-extensionmanager": "^12.4.8",
+    "typo3/cms-felogin": "^12.4.8",
+    "typo3/cms-filelist": "^12.4.8",
+    "typo3/cms-filemetadata": "^12.4.8",
+    "typo3/cms-fluid": "^12.4.8",
+    "typo3/cms-fluid-styled-content": "^12.4.8",
+    "typo3/cms-frontend": "^12.4.8",
+    "typo3/cms-impexp": "^12.4.8",
+    "typo3/cms-info": "^12.4.8",
+    "typo3/cms-install": "^12.4.8",
+    "typo3/cms-linkvalidator": "^12.4.8",
+    "typo3/cms-opendocs": "^12.4.8",
+    "typo3/cms-recycler": "^12.4.8",
+    "typo3/cms-redirects": "^12.4.8",
+    "typo3/cms-reports": "^12.4.8",
+    "typo3/cms-rte-ckeditor": "^12.4.8",
+    "typo3/cms-scheduler": "^12.4.8",
+    "typo3/cms-seo": "^12.4.8",
+    "typo3/cms-setup": "^12.4.8",
+    "typo3/cms-sys-note": "^12.4.8",
+    "typo3/cms-t3editor": "^12.4.8",
+    "typo3/cms-tstemplate": "^12.4.8",
+    "typo3/cms-viewpage": "^12.4.8",
+    "typo3/cms-workspaces": "^12.4.8",
+
+    "studio/site-package": "dev-main",
+    "b13/container": "2.3.1",
+    "mask/mask": "8.3.7",
+    "georgringer/news": "^11.4"
+
+  },
+
+  "autoload": {
+    "psr-4": {
+      "Studio\\SitePackage\\": "src/packages/site_package/Classes"
+    }
+  },
+
+  "extra": {
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": "public"
+    }
+  }
+}
