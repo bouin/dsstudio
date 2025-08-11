@@ -9,7 +9,7 @@ composer.lock
 /var/**
 /var/
 /public/
-
+/.ddev/
 # Environment
 .env
 /.ddev/.importdb

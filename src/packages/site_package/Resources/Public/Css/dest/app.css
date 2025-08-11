@@ -1,3 +1,4 @@
+/*Variables*/
 @font-face {
   font-family: "editorial_regular";
   src: url("../../Fonts/editorial/PPEditorialNew-Regular.woff") format("woff");
@@ -51,29 +52,35 @@ p {
   font-family: "Be Vietnam Pro", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #2E282A;
+  color: black;
   font-size: 19px;
   line-height: 1.3;
 }
-p a, p div, p span, p h2 {
-  color: #2E282A;
+p a,
+p div,
+p span,
+p h2 {
+  color: black;
   text-decoration: none !important;
 }
 p a:hover {
-  color: #2E282A;
+  color: black;
   text-decoration: underline;
 }
 
-.h3, h3 {
+.h3,
+h3 {
   font-size: 2.05rem !important;
 }
 @media screen and (max-width: 768px) {
-  .h3, h3 {
+  .h3,
+  h3 {
     font-size: 4.5vw !important;
   }
 }
 @media screen and (max-width: 562px) {
-  .h3, h3 {
+  .h3,
+  h3 {
     font-size: 6vw !important;
   }
 }
@@ -104,30 +111,28 @@ p a:hover {
 nav .nav-item {
   padding-left: 10px !important;
   padding-right: 10px !important;
-  padding-bottom: 0px !important;
-  padding-top: 0px !important;
-}
-nav .nav-item a {
-  padding: 0px !important;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
 }
 @media screen and (max-width: 1199.9px) {
   nav .nav-item {
     padding-left: 7px !important;
-    padding-bottom: 0px !important;
-    padding-top: 0px !important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
   }
+}
+nav .nav-item a {
+  padding: 0 !important;
 }
 nav .nav-link {
   font-size: 15px;
   text-transform: uppercase;
-  color: #2E282A;
-  font-family: "editorial_regular", Arial, Helvetica, serif;
+  color: white;
   font-family: "editorial_regular", Arial, Helvetica, serif;
   border-bottom: 1px solid transparent;
 }
 @media screen and (max-width: 991.9px) {
   nav .nav-link {
-    font-size: 17px;
     font-size: 23px;
   }
 }
@@ -142,24 +147,22 @@ nav .nav-link {
   }
 }
 nav .nav-link:hover {
-  color: #2E282A;
-  border-bottom: 1px solid #2E282A !important;
+  color: black;
+  border-bottom: 1px solid black !important;
 }
 nav .nav-link.active {
-  border-bottom: 1px solid #2E282A;
-}
-nav .nav-link.active:hover {
-  border-bottom: 1px solid #2E282A;
-}
-nav .nav-link.active {
+  border-bottom: 1px solid black;
   text-decoration: none;
 }
+nav .nav-link.active:hover {
+  border-bottom: 1px solid black;
+}
 
-nav.new-colors .nav-link:active {
+nav.new-colors .nav-link:active, nav.new-colors .nav-link:hover {
   border-bottom: 1px solid #E5C5A3 !important;
 }
-nav.new-colors .nav-link:hover {
-  border-bottom: 1px solid #E5C5A3 !important;
+nav.new-colors .navbar-toggler.collapsed #nav-icon span {
+  background: #E5C5A3;
 }
 
 @media screen and (max-width: 1199.9px) {
@@ -168,7 +171,23 @@ nav.new-colors .nav-link:hover {
     padding-bottom: 17px;
   }
 }
+@media screen and (max-width: 991.9px) {
+  .navbar {
+    padding-top: 12px;
+    padding-bottom: 25px;
+  }
+}
 
+.navbar-toggler {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.navbar-toggler:active, .navbar-toggler:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
 .navbar-toggler #nav-icon {
   width: 47px;
   height: 10px;
@@ -177,29 +196,6 @@ nav.new-colors .nav-link:hover {
   transform: rotate(0deg);
   cursor: pointer;
 }
-
-@media screen and (max-width: 991.9px) {
-  .navbar-toggler #nav-icon {
-    width: 30px;
-    height: 22px;
-    position: relative;
-    margin: 0 auto;
-    transform: rotate(0deg);
-    cursor: pointer;
-  }
-}
-.navbar-toggler #nav-icon span:nth-child(1) {
-  top: 0px;
-}
-
-nav.new-colors .navbar-toggler.collapsed #nav-icon span {
-  background: #E5C5A3;
-}
-
-.navbar-toggler.collapsed #nav-icon span {
-  background: #2E282A;
-}
-
 .navbar-toggler #nav-icon span {
   display: block;
   position: absolute;
@@ -208,54 +204,33 @@ nav.new-colors .navbar-toggler.collapsed #nav-icon span {
   opacity: 1;
   transform: rotate(0deg);
   transition: 0.25s ease-in-out;
+  background: black;
 }
-
+.navbar-toggler #nav-icon span:nth-child(1) {
+  top: 0;
+}
 .navbar-toggler #nav-icon span:nth-child(2) {
   top: 6px;
 }
-
-.navbar-toggler {
-  border: none;
-}
-
-body.modal-open .navbar-toggler #nav-icon span:nth-child(1) {
-  transform: rotate(45deg);
-}
-
-body.modal-open .navbar-toggler #nav-icon span:nth-child(1) {
-  left: 0px;
-  top: 5px;
-}
-
-body.modal-open .navbar-toggler #nav-icon span:nth-child(2) {
-  transform: rotate(-45deg);
-}
-
-body.modal-open .navbar-toggler #nav-icon span:nth-child(2) {
-  left: 0px;
-  top: 5px;
-}
-
-.navbar-toggler #nav-icon span {
-  background: #2E282A;
-}
-
-.navbar-toggler {
-  outline: none;
-  border: none;
-  box-shadow: none;
-}
-.navbar-toggler:active, .navbar-toggler:focus {
-  outline: none;
-  border: none;
-  box-shadow: none;
+.navbar-toggler.collapsed #nav-icon span {
+  background: black;
 }
 
 @media screen and (max-width: 991.9px) {
-  .navbar {
-    padding-top: 12px;
-    padding-bottom: 25px;
+  .navbar-toggler #nav-icon {
+    width: 30px;
+    height: 22px;
   }
+}
+body.modal-open .navbar-toggler #nav-icon span:nth-child(1) {
+  transform: rotate(45deg);
+  left: 0;
+  top: 5px;
+}
+body.modal-open .navbar-toggler #nav-icon span:nth-child(2) {
+  transform: rotate(-45deg);
+  left: 0;
+  top: 5px;
 }
 
 @media screen and (max-width: 991.9px) {
@@ -263,7 +238,7 @@ body.modal-open .navbar-toggler #nav-icon span:nth-child(2) {
     position: absolute;
     top: 35px;
     width: 100%;
-    left: 0px;
+    left: 0;
     background-color: #BFDAEB;
   }
 }
@@ -273,10 +248,9 @@ body.modal-open .navbar-toggler #nav-icon span:nth-child(2) {
     display: inline-block !important;
   }
 }
-
 @media screen and (max-width: 991.9px) {
   .nav-item:first-of-type {
-    padding-top: 0px;
+    padding-top: 0;
   }
 }
 
@@ -298,7 +272,7 @@ html {
 
 .frame-space-before-small {
   padding-top: 3.3vw;
-  margin-top: 0px;
+  margin-top: 0;
 }
 @media screen and (max-width: 575.9px) {
   .frame-space-before-small {
@@ -308,7 +282,7 @@ html {
 
 .frame-space-before-medium {
   padding-top: 4.5vw;
-  margin-top: 0px;
+  margin-top: 0;
 }
 @media screen and (max-width: 575.9px) {
   .frame-space-before-medium {
@@ -318,12 +292,12 @@ html {
 
 .frame-space-before-4 {
   padding-top: 4vw;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .frame-space-after-medium {
   padding-bottom: 4.5vw;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 @media screen and (max-width: 575.9px) {
   .frame-space-after-medium {
@@ -333,7 +307,7 @@ html {
 
 .frame-space-before-large {
   padding-top: 6vw;
-  margin-top: 0px;
+  margin-top: 0;
 }
 @media screen and (max-width: 575.9px) {
   .frame-space-before-large {
@@ -343,7 +317,7 @@ html {
 
 .frame-space-after-large {
   padding-bottom: 6vw;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 @media screen and (max-width: 575.9px) {
   .frame-space-after-large {
@@ -353,7 +327,7 @@ html {
 
 .frame-space-before-extra-large {
   padding-top: 8vw;
-  margin-top: 0px;
+  margin-top: 0;
 }
 @media screen and (max-width: 575.9px) {
   .frame-space-before-extra-large {
@@ -363,7 +337,7 @@ html {
 
 .frame-space-after-extra-large {
   padding-bottom: 8vw;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 @media screen and (max-width: 575.9px) {
   .frame-space-after-extra-large {
@@ -371,11 +345,7 @@ html {
   }
 }
 
-/*.mobile-padding-bottom-md-50 {
-  @media screen and (max-width:$md)  {
-    padding-bottom: 50px;
-  }
-}*/
+/* Loops for padding/margin utilities */
 .pt-5 {
   padding-top: 5px;
 }
@@ -2671,7 +2641,6 @@ body, html {
 }
 
 header.hedo {
-  background: #BFDAEB;
   height: 100vh;
   max-height: 75vw;
   min-height: 600px;
@@ -2687,7 +2656,7 @@ header.hedo {
 .header, .parent-page-1 {
   background: #BFDAEB;
   height: 50vh;
-  max-height: 36vw;
+  max-height: 25vw;
   min-height: 300px;
 }
 
@@ -2786,9 +2755,6 @@ p:not(.like-h2) a {
 .frame-layout-7 {
   background: #D8E5F1;
 }
-.frame-layout-9 {
-  background: #E3EDF4;
-}
 
 .font-smaller {
   font-size: 15px;
@@ -2845,9 +2811,7 @@ p:not(.like-h2) a {
     font-size: 7.3vw;
   }
 }
-.font-vietnam {
-  font-family: "Be Vietnam Pro", sans-serif;
-}
+
 .font-12 {
   font-family: "Be Vietnam Pro", sans-serif;
   font-size: 12px;
@@ -2861,9 +2825,9 @@ p:not(.like-h2) a {
   font-family: "Be Vietnam Pro", sans-serif;
   font-size: 15px;
   border-radius: 50px;
-  border: 1px solid #2E282A;
+  border: 1px solid black;
   margin-right: 10px;
-  color: #2E282A;
+  color: black;
   padding: 2px 10px;
   margin-bottom: 12px;
 }
@@ -2894,7 +2858,7 @@ p:not(.like-h2) a {
 }
 
 .frame-layout-6 a {
-  border-bottom: 1px solid #2E282A;
+  border-bottom: 1px solid black;
   transition: 0s all ease-in-out;
 }
 .frame-layout-6 a:hover {
@@ -2909,7 +2873,7 @@ p:not(.like-h2) a {
 }
 
 .new-colors .nav-item .nav-link {
-  color: #2E282A !important;
+  color: black !important;
 }
 
 @media screen and (min-width: 991.9px) {
@@ -2955,7 +2919,7 @@ p:not(.like-h2) a {
 }
 .page-4 article a:hover,
 .page-3 article a:hover {
-  border-bottom: 1px solid #2E282A;
+  border-bottom: 1px solid black;
 }
 
 .page-4 article .bck-green,
@@ -2967,11 +2931,6 @@ p:not(.like-h2) a {
 
 nav .navbar-collapse {
   transition: 0s all ease-in-out !important;
-}
-.contact-team p a {
-  font-size: 44px;
-  font-size: 3.7vw;
-  font-family: "editorial_regular", Arial, Helvetica, serif;
 }
 
 @media (min-width: 576px) {
@@ -2992,65 +2951,38 @@ nav .navbar-collapse {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 575.9px) {
   .navbar-toggler {
     padding-right: 0px;
   }
-  .contact-team p a {
-    font-size: 32px;
-  }
 }
-.like-h4 p,
-.like-h4 p a{
-  font-size: calc(1.275rem + .3vw);
-  font-family: "editorial_regular", Arial, Helvetica, serif;
-}
-.frame-layout-8 {
-  background-color: white;
+.hedo {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; /* full screen height */
 }
 
-.clients a {
-  color: #2E282A;
+.hedo .bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* like background-size: cover */
+  z-index: -1;
 }
-.btn-link {
 
-  text-transform: none;
-  color: #2E282A !important;
-  text-decoration: none;
-  padding: 0px;
+.hedo .container-fluid,
+.hedo nav {
+  position: relative;
+  z-index: 2;
 }
-.btn-link:hover {
-  color: #2E282A !important;
+
+.navbar {
+  background: transparent !important; /* keep menu transparent over video */
+  background: transparent !important; /* keep menu transparent over video */
 }
-.font-vietnam .plus {
-  display: none;
-}
-.font-vietnam .minus {
-  display: block;
-}
-.font-vietnam.collapsed .plus {
-  display: block;
-}
-.font-vietnam.collapsed .minus {
-  display: none;
-}
-.font-smaller a {
-  font-size: 15px;
-  border-bottom: 1px solid #2E282A;
-}
-.f15-muss,
-.f15-muss p,
-.f15-muss p a,
-.f15-muss a
-{
-  font-size: 15px;
-}
-span.minus {
-  font-size: 15px;
-}
-span.plus, span.minus {
-  font-size: 15px !important;
-}
-ul li {
-  font-family: "Be Vietnam Pro", sans-serif;
+
+.menusub img {
+  width: 120px !important;
 }

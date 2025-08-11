@@ -1,193 +1,204 @@
+@use 'variables' as *;
+
 .frame-space-before-extra-small {
   margin-top: 1.8vw;
 }
+
 .frame-space-after-extra-small {
   margin-bottom: 2.5vw;
 }
 
 .frame-space-before-small {
   padding-top: 3.3vw;
-  margin-top: 0px;
-  @media screen and (max-width: $sm){
+  margin-top: 0;
+
+  @media screen and (max-width: $sm) {
     padding-top: 7vw;
   }
 }
 
 .frame-space-before-medium {
   padding-top: 4.5vw;
-  margin-top: 0px;
-  @media screen and (max-width: $sm){
+  margin-top: 0;
+
+  @media screen and (max-width: $sm) {
     padding-top: 9.5vw;
   }
 }
+
 .frame-space-before-4 {
   padding-top: 4vw;
-  margin-top: 0px;
-
+  margin-top: 0;
 }
+
 .frame-space-after-medium {
   padding-bottom: 4.5vw;
-  margin-bottom: 0px;
-  @media screen and (max-width: $sm){
+  margin-bottom: 0;
+
+  @media screen and (max-width: $sm) {
     padding-bottom: 9.5vw;
   }
 }
+
 .frame-space-before-large {
   padding-top: 6vw;
-  margin-top: 0px;
-  @media screen and (max-width: $sm){
+  margin-top: 0;
+
+  @media screen and (max-width: $sm) {
     padding-top: 11vw;
   }
 }
+
 .frame-space-after-large {
   padding-bottom: 6vw;
-  margin-bottom: 0px;
-  @media screen and (max-width: $sm){
+  margin-bottom: 0;
+
+  @media screen and (max-width: $sm) {
     padding-bottom: 11vw;
   }
 }
 
 .frame-space-before-extra-large {
   padding-top: 8vw;
-  @media screen and (max-width: $sm){
+  margin-top: 0;
+
+  @media screen and (max-width: $sm) {
     padding-top: 14vw;
   }
-  margin-top: 0px;
 }
+
 .frame-space-after-extra-large {
   padding-bottom: 8vw;
-  margin-bottom: 0px;
-  @media screen and (max-width: $sm){
+  margin-bottom: 0;
+
+  @media screen and (max-width: $sm) {
     padding-bottom: 14vw;
   }
 }
 
-
-/*.mobile-padding-bottom-md-50 {
-  @media screen and (max-width:$md)  {
-    padding-bottom: 50px;
-  }
-}*/
-
+/* Loops for padding/margin utilities */
 @for $i from 1 through 20 {
   .pt-#{$i * 5} {
-    padding-top: ($i*5)+px;
+    padding-top: ($i * 5) + px;
   }
-  @media screen and (max-width: 1200px){
+  @media screen and (max-width: 1200px) {
     .pt-#{$i * 5} {
-      padding-top: ($i*4)+px;
+      padding-top: ($i * 4) + px;
     }
   }
-  @media screen and (max-width: 992px){
+  @media screen and (max-width: 992px) {
     .pt-#{$i * 5} {
-      padding-top: ($i*3)+px;
+      padding-top: ($i * 3) + px;
     }
   }
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     .pt-#{$i * 5} {
-      padding-top: ($i*2)+px;
-    }
-  }
-}
-@for $i from 1 through 20 {
-  .pb-#{$i * 5} {
-    padding-bottom: ($i*5)+px;
-  }
-  @media screen and (max-width: 1200px){
-    .pb-#{$i * 5} {
-      padding-bottom: ($i*4)+px;
-    }
-  }
-  @media screen and (max-width: 992px){
-    .pb-#{$i * 5} {
-      padding-bottom: ($i*3)+px;
-    }
-  }
-  @media screen and (max-width: 768px){
-    .pb-#{$i * 5} {
-      padding-bottom: ($i*2)+px;
-    }
-  }
-}
-@for $i from 1 through 20 {
-  .pl-#{$i * 5} {
-    padding-left: ($i*5)+px;
-  }
-  @media screen and (max-width: 1200px){
-    .pl-#{$i * 5} {
-      padding-left: ($i*4)+px;
-    }
-  }
-  @media screen and (max-width: 992px){
-    .pl-#{$i * 5} {
-      padding-left: ($i*3)+px;
-    }
-  }
-  @media screen and (max-width: 768px){
-    .pl-#{$i * 5} {
-      padding-left: ($i*2)+px;
-    }
-  }
-}
-@for $i from 1 through 20 {
-  .pr-#{$i * 5} {
-    padding-right: ($i*5)+px;
-  }
-  @media screen and (max-width: 1200px){
-    .pr-#{$i * 5} {
-      padding-right: ($i*4)+px;
-    }
-  }
-  @media screen and (max-width: 992px){
-    .pr-#{$i * 5} {
-      padding-right: ($i*3)+px;
-    }
-  }
-  @media screen and (max-width: 768px){
-    .pr-#{$i * 5} {
-      padding-right: ($i*2)+px;
+      padding-top: ($i * 2) + px;
     }
   }
 }
 
+@for $i from 1 through 20 {
+  .pb-#{$i * 5} {
+    padding-bottom: ($i * 5) + px;
+  }
+  @media screen and (max-width: 1200px) {
+    .pb-#{$i * 5} {
+      padding-bottom: ($i * 4) + px;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .pb-#{$i * 5} {
+      padding-bottom: ($i * 3) + px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .pb-#{$i * 5} {
+      padding-bottom: ($i * 2) + px;
+    }
+  }
+}
+
+@for $i from 1 through 20 {
+  .pl-#{$i * 5} {
+    padding-left: ($i * 5) + px;
+  }
+  @media screen and (max-width: 1200px) {
+    .pl-#{$i * 5} {
+      padding-left: ($i * 4) + px;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .pl-#{$i * 5} {
+      padding-left: ($i * 3) + px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .pl-#{$i * 5} {
+      padding-left: ($i * 2) + px;
+    }
+  }
+}
+
+@for $i from 1 through 20 {
+  .pr-#{$i * 5} {
+    padding-right: ($i * 5) + px;
+  }
+  @media screen and (max-width: 1200px) {
+    .pr-#{$i * 5} {
+      padding-right: ($i * 4) + px;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .pr-#{$i * 5} {
+      padding-right: ($i * 3) + px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .pr-#{$i * 5} {
+      padding-right: ($i * 2) + px;
+    }
+  }
+}
 
 @for $i from 1 through 20 {
   .mt-#{$i * 5} {
-    margin-top: ($i*5)+px;
+    margin-top: ($i * 5) + px;
   }
-  @media screen and (max-width: 1200px){
+  @media screen and (max-width: 1200px) {
     .mt-#{$i * 5} {
-      margin-top: ($i*4)+px;
+      margin-top: ($i * 4) + px;
     }
   }
-  @media screen and (max-width: 992px){
+  @media screen and (max-width: 992px) {
     .mt-#{$i * 5} {
-      margin-top: ($i*3)+px;
+      margin-top: ($i * 3) + px;
     }
   }
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     .mt-#{$i * 5} {
-      margin-top: ($i*2)+px;
+      margin-top: ($i * 2) + px;
     }
   }
 }
+
 @for $i from 1 through 20 {
   .mb-#{$i * 5} {
-    margin-bottom: ($i*5)+px;
+    margin-bottom: ($i * 5) + px;
   }
-  @media screen and (max-width: 1200px){
+  @media screen and (max-width: 1200px) {
     .mb-#{$i * 5} {
-      margin-bottom: ($i*4)+px;
+      margin-bottom: ($i * 4) + px;
     }
   }
-  @media screen and (max-width: 992px){
+  @media screen and (max-width: 992px) {
     .mb-#{$i * 5} {
-      margin-bottom: ($i*3)+px;
+      margin-bottom: ($i * 3) + px;
     }
   }
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     .mb-#{$i * 5} {
-      margin-bottom: ($i*2)+px;
+      margin-bottom: ($i * 2) + px;
     }
   }
 }
