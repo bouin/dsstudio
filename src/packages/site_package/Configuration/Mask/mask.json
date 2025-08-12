@@ -169,6 +169,64 @@
                     "shortLabel": "",
                     "sorting": 4
                 },
+                "text": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "header",
+                        "tx_mask_text_some_options"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "text",
+                    "label": "Text",
+                    "labels": [
+                        "",
+                        "Text \u2013\u00a0one col."
+                    ],
+                    "shortLabel": "",
+                    "sorting": 5
+                },
+                "text_with_two_columns_below": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "header",
+                        "tx_mask_biggger_text",
+                        "tx_mask_first_columnus",
+                        "tx_mask_second_columnus",
+                        "tx_mask_text_for_link",
+                        "tx_mask_link_link"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "text_with_two_columns_below",
+                    "label": "Text with two columns below",
+                    "labels": [
+                        "",
+                        "Text",
+                        "1 col.",
+                        "2. col",
+                        "Text for link",
+                        "Link"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 6
+                },
                 "three_rows": {
                     "color": "#000000",
                     "colorOverlay": "#000000",
@@ -203,6 +261,11 @@
                 }
             },
             "sql": {
+                "tx_mask_biggger_text": {
+                    "tt_content": {
+                        "tx_mask_biggger_text": "mediumtext"
+                    }
+                },
                 "tx_mask_clients_all": {
                     "tt_content": {
                         "tx_mask_clients_all": "int(11) unsigned DEFAULT '0' NOT NULL"
@@ -211,6 +274,11 @@
                 "tx_mask_first_col": {
                     "tt_content": {
                         "tx_mask_first_col": "mediumtext"
+                    }
+                },
+                "tx_mask_first_columnus": {
+                    "tt_content": {
+                        "tx_mask_first_columnus": "mediumtext"
                     }
                 },
                 "tx_mask_first_row": {
@@ -228,6 +296,11 @@
                         "tx_mask_image_portrait": "int(11) unsigned DEFAULT '0' NOT NULL"
                     }
                 },
+                "tx_mask_link_link": {
+                    "tt_content": {
+                        "tx_mask_link_link": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
                 "tx_mask_portrait_1_text_below": {
                     "tt_content": {
                         "tx_mask_portrait_1_text_below": "varchar(255) DEFAULT '' NOT NULL"
@@ -241,6 +314,11 @@
                 "tx_mask_second_col": {
                     "tt_content": {
                         "tx_mask_second_col": "mediumtext"
+                    }
+                },
+                "tx_mask_second_columnus": {
+                    "tt_content": {
+                        "tx_mask_second_columnus": "mediumtext"
                     }
                 },
                 "tx_mask_second_row": {
@@ -263,6 +341,16 @@
                         "tx_mask_section_with_keywords": "int(11) unsigned DEFAULT '0' NOT NULL"
                     }
                 },
+                "tx_mask_text_for_link": {
+                    "tt_content": {
+                        "tx_mask_text_for_link": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_text_some_options": {
+                    "tt_content": {
+                        "tx_mask_text_some_options": "mediumtext"
+                    }
+                },
                 "tx_mask_third_row": {
                     "tt_content": {
                         "tx_mask_third_row": "mediumtext"
@@ -280,6 +368,15 @@
                     "fullKey": "header",
                     "key": "header",
                     "type": "string"
+                },
+                "tx_mask_biggger_text": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_biggger_text",
+                    "key": "biggger_text",
+                    "type": "richtext"
                 },
                 "tx_mask_clients_all": {
                     "config": {
@@ -316,6 +413,15 @@
                     },
                     "fullKey": "tx_mask_first_col",
                     "key": "first_col",
+                    "type": "richtext"
+                },
+                "tx_mask_first_columnus": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_first_columnus",
+                    "key": "first_columnus",
                     "type": "richtext"
                 },
                 "tx_mask_first_row": {
@@ -358,6 +464,15 @@
                     "key": "image_portrait",
                     "type": "file"
                 },
+                "tx_mask_link_link": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "link"
+                    },
+                    "fullKey": "tx_mask_link_link",
+                    "key": "link_link",
+                    "type": "link"
+                },
                 "tx_mask_portrait_1_text_below": {
                     "config": {
                         "nullable": 0,
@@ -383,6 +498,15 @@
                     },
                     "fullKey": "tx_mask_second_col",
                     "key": "second_col",
+                    "type": "richtext"
+                },
+                "tx_mask_second_columnus": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_second_columnus",
+                    "key": "second_columnus",
                     "type": "richtext"
                 },
                 "tx_mask_second_row": {
@@ -458,6 +582,24 @@
                     "fullKey": "tx_mask_section_with_keywords",
                     "key": "section_with_keywords",
                     "type": "inline"
+                },
+                "tx_mask_text_for_link": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_text_for_link",
+                    "key": "text_for_link",
+                    "type": "string"
+                },
+                "tx_mask_text_some_options": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_text_some_options",
+                    "key": "text_some_options",
+                    "type": "richtext"
                 },
                 "tx_mask_third_row": {
                     "config": {

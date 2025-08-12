@@ -7,7 +7,7 @@
 lib.mainNavigation = COA
 lib.mainNavigation {
     entryLevel = 0
-    wrap = <ul class="navbar-nav mb-2 mb-lg-0 d-block d-lg-flex text-center text-lg-left  w-100">|</ul>
+    wrap = <ul class="navbar-nav mb-2 mb-lg-0 d-block d-lg-flex text-center text-lg-left">|</ul>
 
     20 = HMENU
     20 {
@@ -37,7 +37,7 @@ lib.mainNavigation {
 
 lib.subNavigation = COA
 lib.subNavigation {
-wrap = <ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-end w-100 subpage">|</ul>
+wrap = <ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-end subpage">|</ul>
 10 = HMENU
 10 {
 

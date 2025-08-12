@@ -19,11 +19,9 @@ nav {
   }
 
   .nav-link {
-    font-size: 15px;
+    font-size: 19px;
     text-transform: uppercase;
-    color: white;
-    font-family: $font1;
-    border-bottom: 1px solid transparent;
+    color: $black;
 
     @media screen and (max-width: $lg) {
       font-size: 23px;
@@ -36,29 +34,27 @@ nav {
     }
 
     &:hover {
-      color: black;
-      border-bottom: 1px solid black !important;
+      font-family: $font2italic !important;
+      color: $black;
     }
 
     &.active {
-      border-bottom: 1px solid black;
+      font-family: $font2italic !important;
       text-decoration: none;
-
+    }
+  }
+}
+.page-1 nav {
+  .nav-item {
+    .nav-link {
+      color: white;
       &:hover {
-        border-bottom: 1px solid black;
+        color: white;
       }
     }
   }
 }
-
 nav.new-colors {
-  .nav-link {
-    &:active,
-    &:hover {
-      border-bottom: 1px solid $beige !important;
-    }
-  }
-
   .navbar-toggler.collapsed #nav-icon span {
     background: $beige;
   }
@@ -103,7 +99,7 @@ nav.new-colors {
       opacity: 1;
       transform: rotate(0deg);
       transition: 0.25s ease-in-out;
-      background: black;
+      background: $black;
 
       &:nth-child(1) {
         top: 0;
@@ -115,7 +111,7 @@ nav.new-colors {
   }
 
   &.collapsed #nav-icon span {
-    background: black;
+    background: $black;
   }
 }
 

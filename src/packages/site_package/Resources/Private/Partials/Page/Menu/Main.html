@@ -15,9 +15,12 @@
                             </f:link.page>
                         </div>
                         <nav class="navbar navbar-expand-lg navbar-light ps-md-4 pe-md-4 changenr1 fixed-top" id="nav-nav-ok" style="margin-top: 0px;">
-                            <div class="container-fluid justify-content-end align-items-end">
-                                <div class="row">
-                                    <div class="col-12 from-here">
+                            <div class="container-fluid px-0 justify-content-center">
+                                <div class="row justify-content-end align-items-start w-100 font-uppercase font-white">
+                                    <div class="col-12 col-md-4 ps-0">
+                                        <p>Designing consent</p>
+                                    </div>
+                                    <div class="col-12 col-md-8 from-here jutify-content-end align-items-start pe-0">
                                         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
                                             <div id="nav-icon" class="mobile-margin">
                                                 <span></span>
@@ -25,9 +28,9 @@
                                             </div>
                                         </button>
                                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
                                                 <f:cObject typoscriptObjectPath="lib.mainNavigation"></f:cObject>
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -61,23 +64,7 @@
                                     </button>
                                     <div class="collapse navbar-collapse justify-content-end align-items-end"  id="navbarSupportedContent">
 
-                                            <ul class="navbar-nav mb-2 mb-lg-0 d-block d-lg-flex text-center text-lg-left">
-                                                <li class="nav-item">
-                                                    <a href="https://www.davidschaererstudio.com/#c9" class="nav-link">Angebot</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="https://www.davidschaererstudio.com/#c15" class="nav-link">Erfahrung</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="https://www.davidschaererstudio.com/#c39" class="nav-link">Team</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="https://www.davidschaererstudio.com/#c41" class="nav-link">Klienten</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="https://www.davidschaererstudio.com/#footer_kontakt" class="nav-link">Kontakt</a>
-                                                </li>
-                                            </ul>
+                                        <f:cObject typoscriptObjectPath="lib.mainNavigation"></f:cObject>
 
                                     </div>
                                 </div>
@@ -85,16 +72,26 @@
                         </div>
                     </div>
                 </nav>
-                <!--MENU-->
-                <div class="container-fluid pl-4 pb-5 pt-5 pt-md-0 pr-4 d-none">
-                    <div class="row h-100 menusub">
-                        <div class="col-12 d-flex justify-content-center align-items-end">
-                            <f:link.page pageUid="1" class="w-100">
-                                <f:image src="EXT:site_package/Resources/Public/Images/logo.svg" style="height:auto!important" class="w-100 h-auto"></f:image>
-                            </f:link.page>
+
+                <div class="container-fluid padd-for-text">
+                    <div class="row">
+                        <div class="col-12 text-center text-editorial size-big">
+
+                            <f:if condition="{data.uid} == 14">
+                                <f:cObject typoscriptObjectPath="lib.angebot"></f:cObject>
+                            </f:if>
+
+                            <f:if condition="{data.uid} == 15">
+                                <f:cObject typoscriptObjectPath="lib.cases"></f:cObject>
+                            </f:if>
+
+                            <f:if condition="{data.uid} == 16">
+                                <f:cObject typoscriptObjectPath="lib.info"></f:cObject>
+                            </f:if>
                         </div>
                     </div>
                 </div>
+
             </div>
         </f:else>
     </f:if>

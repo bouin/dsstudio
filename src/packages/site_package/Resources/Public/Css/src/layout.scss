@@ -8,31 +8,38 @@ body {
   background: white;
   position: relative;
 }
-
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility; /* Enables kerning & ligatures in some browsers */
+}
 body, html {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility; /* Enables kerning & ligatures in some browsers */
   font-family: $font1;
   position: relative;
 }
 
 header.hedo {
-
   height: 100vh;
-  max-height: 75vw;
-  min-height: 600px;
+  max-height: 1200px;
+  min-height: 800px;
   @media (max-width: $sm){
-    height: 57vh;
-    max-height: 50vh;
-    min-height: unset;
+    height: 90vh;
+  }
+}
+.parent-page-1 .navbar-nav .nav-item {
+  &:last-of-type {
+    padding-right: 0px !important;
   }
 }
 .header, .parent-page-1 {
   background: $blue;
-  height: 50vh;
-  max-height: 25vw;
-  min-height: 300px;
+  height: 100vh;
+  max-height: 1200px;
+  min-height: 800px;
 }
 .footer_kontakt header {
   background: $dark;
@@ -57,9 +64,9 @@ header.hedo {
       }
     }
   }
-  background: $dark;
-  padding-top: 160px;
-  padding-top: 12vw;
+  background: $black;
+  padding-top: 60px;
+  padding-top: 6vw;
   padding-bottom: 2vw;
   a,div,p,h2,h3,h1 {
     color: $beige;
@@ -89,25 +96,23 @@ p:not(.like-h2) a {
   font-size: 12px;
 }
 .button-david {
-  font-size: 17px;
+  font-size: 15px;
    font-family: $font2;
+  padding-right: 20px;
+  padding-left: 20px;
    text-transform: uppercase;
-   border: 1px solid $beige;
-   padding: 5px 20px;
-   min-width: 150px;
-   border-radius: 50px;
   text-align: center;
   margin-left: 5px;
   margin-right: 5px;
   transition: $trans;
+  border-bottom: 1px solid transparent;
   &:hover {
     transition: $trans;
-    background: $beige;
-    color: $dark;
+    border-bottom: 1px solid white;
   }
 }
 .social-row {
-  padding-top: 6vw;
+  padding-top: 5vw;
   padding-bottom: 6vw;
 }
 
@@ -178,9 +183,9 @@ p:not(.like-h2) a {
   font-family: $font2;
   font-size: 15px;
   border-radius: 50px;
-  border: 1px solid black;
+  border: 1px solid $black;
   margin-right: 10px;
-  color: black;
+  color: $black;
   padding: 2px 10px;
   margin-bottom: 12px;
 }
@@ -205,7 +210,7 @@ p:not(.like-h2) a {
 }
 .frame-layout-6 {
   a {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $black;
     transition: 0s all ease-in-out;
     &:hover {
       border-bottom: 1px solid transparent;
@@ -222,8 +227,11 @@ p:not(.like-h2) a {
 }
 .new-colors {
   .nav-item .nav-link {
-    color: black !important;
+    color: $black !important;
   }
+}
+.nav-item .nav-link {
+  font-family: $font2;
 }
 
 @media screen and (min-width: 991.9px) {
@@ -269,7 +277,7 @@ p:not(.like-h2) a {
     border-bottom: 1px solid transparent;
   }
   a:hover {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $black;
   }
 }
 .page-4 article,
@@ -283,6 +291,9 @@ p:not(.like-h2) a {
 }
 nav .navbar-collapse {
   transition: 0s all ease-in-out !important;
+  align-content: end;
+  justify-content: end;
+  align-items: end;
 }
 @media (min-width: 576px) {
   .container, .container-sm {
@@ -338,4 +349,47 @@ nav .navbar-collapse {
 
 .menusub img {
   width: 120px !important;
+}
+.font-uppercase * {
+  text-transform: uppercase;
+}
+.font-white * {
+  color: white;
+}
+
+.text-editorial * {
+  font-family: $font1;
+}
+
+.padd-for-text {
+  padding-top: 6.5vw;
+  @media screen and (max-width:$lg){
+    padding-top: 8.5vw;
+  }
+}
+.parent-page-1 .navbar-nav .nav-item {
+  &:last-of-type {
+    padding-right: 0px !important;
+  }
+}
+.emailrow a:hover {
+  border-bottom: 1px solid transparent !important;
+  font-style: italic;
+}
+.mailchimp {
+  background: white;
+}
+.page-1 .mailchimp {
+  background: $blue;
+}
+.font-area, .font-area * {
+  font-family: $font2;
+}
+.size-xbig *, .size-xbig{
+  font-size: 4.2vw;
+  line-height: 1.1;
+}
+.size-big *, .size-big{
+  font-size: 3.5vw;
+  line-height: 1.1;
 }

@@ -49,3 +49,16 @@ $(document).ready(function() {
     })
 
 });
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    function myFunc(){
+        let header = document.querySelector('.header');
+        let navEl = document.querySelector('.navbar');
+        let navHeight = navEl.offsetHeight;
+        if (header) header.setAttribute('style', `padding-top: ${navHeight}px`);
+    }
+    myFunc();
+    window.onresize = function() {
+        myFunc();
+    };
+});

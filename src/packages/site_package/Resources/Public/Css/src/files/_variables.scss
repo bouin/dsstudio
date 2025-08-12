@@ -3,6 +3,7 @@ $blue: #BFDAEB;
 $lightblue: #D8E5F1;
 $lightbeige: #F8EBDC;
 $beige: #E5C5A3;
+$beige: white;
 $dark: #2B3841;
 $newblack: #2E282A;
 
@@ -13,19 +14,16 @@ $yellow: #F0DE99;
 $lightgreen: #7FCACA;
 $pink: #E9A5C4;
 
-$psize: 19px;
+$psize: 18px;
 
 $grey: grey;
 $white: white;
-$black: black;
+$black: #252525;
 
 $trans: all .3s ease-in-out;
 $font1: 'editorial_regular', Arial, Helvetica, serif;
-$font2: "Be Vietnam Pro", sans-serif;
-
-$font1-medium: 'adelle_sanssemibold', Arial, Helvetica, serif;
-$font1-bold: 'adelle_sansbold', Arial, Helvetica, serif;
-$font1-bold-italic: 'adelle_bold_italic', Arial, Helvetica, serif;
+$font2: "area_normal_semibold", sans-serif;
+$font2italic: "area_normal_semibold_italic", sans-serif;
 
 // Predefined Break-points
 $xxl: 1399.9px;
