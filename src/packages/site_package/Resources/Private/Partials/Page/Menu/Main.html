@@ -44,55 +44,91 @@
             </header>
         </f:then>
         <f:else>
-            <div class="header">
-                <!--MENU-->
-                <nav class="navbar navbar-expand-lg navbar-light ps-md-4 pe-md-4 changenr1 fixed-top" id="nav-nav-ok" style="margin-top: 0px;">
-                    <div class="container-fluid  ">
-                        <div class="row w-100">
-                            <div class="col-12 col-md-4 menusub">
-                                <f:link.page pageUid="1" class="w-100">
-                                    <f:image src="EXT:site_package/Resources/Public/Images/logo.svg" style="height:auto!important" class="w-100 h-auto"></f:image>
-                                </f:link.page>
-                            </div>
-                            <div class="col-12 col-md-8 from-here justify-content-end align-items-end">
-                                <div>
-                                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                                        <div id="nav-icon" class="mobile-margin">
-                                            <span></span>
-                                            <span></span>
+            <f:if condition="{data.uid} == 14 || {data.uid} == 15 || {data.uid} == 16">
+                <f:then>
+
+                <div class="header">
+                    <!--MENU-->
+                    <nav class="navbar navbar-expand-lg navbar-light ps-md-4 pe-md-4 changenr1 fixed-top" id="nav-nav-ok" style="margin-top: 0px;">
+                        <div class="container-fluid  ">
+                            <div class="row w-100">
+                                <div class="col-12 col-md-4 menusub">
+                                    <f:link.page pageUid="1" class="w-100">
+                                        <f:image src="EXT:site_package/Resources/Public/Images/logo.svg" style="height:auto!important" class="w-100 h-auto"></f:image>
+                                    </f:link.page>
+                                </div>
+                                <div class="col-12 col-md-8 from-here justify-content-end align-items-end">
+                                    <div>
+                                        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+                                            <div id="nav-icon" class="mobile-margin">
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </button>
+                                        <div class="collapse navbar-collapse justify-content-end align-items-end"  id="navbarSupportedContent">
+
+                                            <f:cObject typoscriptObjectPath="lib.mainNavigation"></f:cObject>
+
                                         </div>
-                                    </button>
-                                    <div class="collapse navbar-collapse justify-content-end align-items-end"  id="navbarSupportedContent">
-
-                                        <f:cObject typoscriptObjectPath="lib.mainNavigation"></f:cObject>
-
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </nav>
+                    </nav>
 
-                <div class="container-fluid padd-for-text">
-                    <div class="row">
-                        <div class="col-12 text-center text-editorial size-big">
+                    <div class="container-fluid padd-for-text">
+                        <div class="row">
+                            <div class="col-12 text-center text-editorial size-big">
 
-                            <f:if condition="{data.uid} == 14">
-                                <f:cObject typoscriptObjectPath="lib.angebot"></f:cObject>
-                            </f:if>
+                                <f:if condition="{data.uid} == 14">
+                                    <f:cObject typoscriptObjectPath="lib.angebot"></f:cObject>
+                                </f:if>
 
-                            <f:if condition="{data.uid} == 15">
-                                <f:cObject typoscriptObjectPath="lib.cases"></f:cObject>
-                            </f:if>
+                                <f:if condition="{data.uid} == 15">
+                                    <f:cObject typoscriptObjectPath="lib.cases"></f:cObject>
+                                </f:if>
 
-                            <f:if condition="{data.uid} == 16">
-                                <f:cObject typoscriptObjectPath="lib.info"></f:cObject>
-                            </f:if>
+                                <f:if condition="{data.uid} == 16">
+                                    <f:cObject typoscriptObjectPath="lib.info"></f:cObject>
+                                </f:if>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-            </div>
+                </div>
+                </f:then>
+                <f:else>
+                    <div class="">
+                        <!--MENU-->
+                        <nav class="navbar navbar-expand-lg navbar-light ps-md-4 pe-md-4 changenr1 fixed-top" id="nav-nav-ok" style="margin-top: 0px;">
+                            <div class="container-fluid  ">
+                                <div class="row w-100">
+                                    <div class="col-12 col-md-4 menusub">
+                                        <f:link.page pageUid="1" class="w-100">
+                                            <f:image src="EXT:site_package/Resources/Public/Images/logo.svg" style="height:auto!important" class="w-100 h-auto"></f:image>
+                                        </f:link.page>
+                                    </div>
+                                    <div class="col-12 col-md-8 from-here justify-content-end align-items-end">
+                                        <div>
+                                            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+                                                <div id="nav-icon" class="mobile-margin">
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </button>
+                                            <div class="collapse navbar-collapse justify-content-end align-items-end"  id="navbarSupportedContent">
+
+                                                <f:cObject typoscriptObjectPath="lib.mainNavigation"></f:cObject>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </f:else>
+            </f:if>
         </f:else>
     </f:if>
 

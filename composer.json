@@ -57,6 +57,7 @@
     "typo3/cms-workspaces": "^12.4.8",
 
     "studio/site-package": "dev-main",
+    "georgringer/news": "11.4.2",
     "b13/container": "2.3.1",
     "mask/mask": "8.3.7",
     "georgringer/news": "^11.4"

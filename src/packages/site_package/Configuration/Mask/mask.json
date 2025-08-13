@@ -114,6 +114,26 @@
                     "shortLabel": "",
                     "sorting": 1
                 },
+                "image": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_image_image"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "image",
+                    "label": "Image",
+                    "labels": [
+                        "Image"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 10
+                },
                 "portrait": {
                     "color": "#000000",
                     "colorOverlay": "#000000",
@@ -145,6 +165,41 @@
                     ],
                     "shortLabel": "",
                     "sorting": 3
+                },
+                "task_solution_result": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_aufgabe",
+                        "tx_mask_aufgabe_text",
+                        "tx_mask_loesung",
+                        "tx_mask_text_aufgabe",
+                        "tx_mask_result_elo",
+                        "tx_mask_text_result"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "task_solution_result",
+                    "label": "Task_Solution_Result",
+                    "labels": [
+                        "Titel nr1",
+                        "Text (Aufgabe)",
+                        "Titel nr2",
+                        "Text (L\u00f6sung)",
+                        "Titel nr3 (Result)",
+                        "Text (Resultat)"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 7
                 },
                 "team": {
                     "color": "#000000",
@@ -206,6 +261,26 @@
                     ],
                     "shortLabel": "",
                     "sorting": 5
+                },
+                "text_block_only_for_cases": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_text_for_cases"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "text_block_only_for_cases",
+                    "label": "Text block only for cases",
+                    "labels": [
+                        ""
+                    ],
+                    "shortLabel": "",
+                    "sorting": 9
                 },
                 "text_with_two_columns_below": {
                     "color": "#000000",
@@ -276,9 +351,39 @@
                     ],
                     "shortLabel": "",
                     "sorting": 2
+                },
+                "video": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_video_link"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "video",
+                    "label": "Video",
+                    "labels": [
+                        "Video link (if direct from TYPO3, don't use Domain! Start with: \/fileadmin\/)"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 8
                 }
             },
             "sql": {
+                "tx_mask_aufgabe": {
+                    "tt_content": {
+                        "tx_mask_aufgabe": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_aufgabe_text": {
+                    "tt_content": {
+                        "tx_mask_aufgabe_text": "mediumtext"
+                    }
+                },
                 "tx_mask_bck_color": {
                     "tt_content": {
                         "tx_mask_bck_color": "varchar(255) DEFAULT '' NOT NULL"
@@ -319,6 +424,11 @@
                         "tx_mask_first_text_double": "mediumtext"
                     }
                 },
+                "tx_mask_image_image": {
+                    "tt_content": {
+                        "tx_mask_image_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
                 "tx_mask_image_portrait": {
                     "tt_content": {
                         "tx_mask_image_portrait": "int(11) unsigned DEFAULT '0' NOT NULL"
@@ -334,6 +444,11 @@
                         "tx_mask_linkus_lik": "varchar(255) DEFAULT '' NOT NULL"
                     }
                 },
+                "tx_mask_loesung": {
+                    "tt_content": {
+                        "tx_mask_loesung": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
                 "tx_mask_page_less_wide": {
                     "tt_content": {
                         "tx_mask_page_less_wide": "int(11) DEFAULT '0' NOT NULL"
@@ -347,6 +462,11 @@
                 "tx_mask_portrait_seond_text_below": {
                     "tt_content": {
                         "tx_mask_portrait_seond_text_below": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_result_elo": {
+                    "tt_content": {
+                        "tx_mask_result_elo": "varchar(255) DEFAULT '' NOT NULL"
                     }
                 },
                 "tx_mask_second_col": {
@@ -384,6 +504,16 @@
                         "tx_mask_smaller_text": "varchar(255) DEFAULT '' NOT NULL"
                     }
                 },
+                "tx_mask_text_aufgabe": {
+                    "tt_content": {
+                        "tx_mask_text_aufgabe": "mediumtext"
+                    }
+                },
+                "tx_mask_text_for_cases": {
+                    "tt_content": {
+                        "tx_mask_text_for_cases": "mediumtext"
+                    }
+                },
                 "tx_mask_text_for_linek": {
                     "tt_content": {
                         "tx_mask_text_for_linek": "varchar(255) DEFAULT '' NOT NULL"
@@ -392,6 +522,11 @@
                 "tx_mask_text_for_link": {
                     "tt_content": {
                         "tx_mask_text_for_link": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_text_result": {
+                    "tt_content": {
+                        "tx_mask_text_result": "mediumtext"
                     }
                 },
                 "tx_mask_text_some_options": {
@@ -408,6 +543,11 @@
                     "tt_content": {
                         "tx_mask_under_the_image_main_text": "mediumtext"
                     }
+                },
+                "tx_mask_video_link": {
+                    "tt_content": {
+                        "tx_mask_video_link": "varchar(255) DEFAULT '' NOT NULL"
+                    }
                 }
             },
             "tca": {
@@ -416,6 +556,24 @@
                     "fullKey": "header",
                     "key": "header",
                     "type": "string"
+                },
+                "tx_mask_aufgabe": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_aufgabe",
+                    "key": "aufgabe",
+                    "type": "string"
+                },
+                "tx_mask_aufgabe_text": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_aufgabe_text",
+                    "key": "aufgabe_text",
+                    "type": "richtext"
                 },
                 "tx_mask_bck_color": {
                     "config": {
@@ -529,6 +687,28 @@
                     "key": "first_text_double",
                     "type": "richtext"
                 },
+                "tx_mask_image_image": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_image_image",
+                    "imageoverlayPalette": 1,
+                    "key": "image_image",
+                    "type": "file"
+                },
                 "tx_mask_image_portrait": {
                     "config": {
                         "appearance": {
@@ -569,6 +749,15 @@
                     "key": "linkus_lik",
                     "type": "link"
                 },
+                "tx_mask_loesung": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_loesung",
+                    "key": "loesung",
+                    "type": "string"
+                },
                 "tx_mask_page_less_wide": {
                     "config": {
                         "items": [],
@@ -594,6 +783,15 @@
                     },
                     "fullKey": "tx_mask_portrait_seond_text_below",
                     "key": "portrait_seond_text_below",
+                    "type": "string"
+                },
+                "tx_mask_result_elo": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_result_elo",
+                    "key": "result_elo",
                     "type": "string"
                 },
                 "tx_mask_second_col": {
@@ -697,6 +895,24 @@
                     "key": "smaller_text",
                     "type": "string"
                 },
+                "tx_mask_text_aufgabe": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_text_aufgabe",
+                    "key": "text_aufgabe",
+                    "type": "richtext"
+                },
+                "tx_mask_text_for_cases": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_text_for_cases",
+                    "key": "text_for_cases",
+                    "type": "richtext"
+                },
                 "tx_mask_text_for_linek": {
                     "config": {
                         "nullable": 0,
@@ -714,6 +930,15 @@
                     "fullKey": "tx_mask_text_for_link",
                     "key": "text_for_link",
                     "type": "string"
+                },
+                "tx_mask_text_result": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_text_result",
+                    "key": "text_result",
+                    "type": "richtext"
                 },
                 "tx_mask_text_some_options": {
                     "config": {
@@ -741,6 +966,15 @@
                     "fullKey": "tx_mask_under_the_image_main_text",
                     "key": "under_the_image_main_text",
                     "type": "richtext"
+                },
+                "tx_mask_video_link": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_video_link",
+                    "key": "video_link",
+                    "type": "string"
                 }
             }
         },

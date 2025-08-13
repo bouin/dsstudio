@@ -35,8 +35,13 @@ header.hedo {
     padding-right: 0px !important;
   }
 }
-.header, .parent-page-1 {
+.page-14 .header,
+.page-15.header,
+.page-16.header
+{
   background: $blue;
+}
+.header {
   height: 100vh;
   max-height: 1200px;
   min-height: 800px;
@@ -377,7 +382,7 @@ nav .navbar-collapse {
   font-style: italic;
 }
 .mailchimp {
-  background: white;
+  background: #f4f4f4;
 }
 .page-1 .mailchimp {
   background: $blue;
@@ -428,4 +433,9 @@ nav .navbar-collapse {
       left: 54%;
     }
   }
+}
+
+.line {
+  border-bottom: 1px solid $black;
+  padding-top: 20px;
 }

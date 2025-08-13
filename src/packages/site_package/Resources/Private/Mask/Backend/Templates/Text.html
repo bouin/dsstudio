@@ -9,7 +9,7 @@
                                 <div class="text-editorial pt-40">
                                     <f:if condition="{data.tx_mask_text_some_options}">
                                         <div class="font-43 line-height-1-2 text-center h2">
-                                            {data.tx_mask_text_some_options -> f:format.html()}
+                                            {data.tx_mask_text_some_options -> f:format.raw()}
                                         </div>
                                     </f:if>
                                     <f:if condition="{data.tx_mask_smaller_text}">
@@ -46,7 +46,7 @@
                             <div class="text-editorial pt-40 ps-0 ps-md-3 pe-0 pe-md-3">
                                 <f:if condition="{data.tx_mask_text_some_options}">
                                     <h2 class="font-53 line-height-1-2">
-                                        {data.tx_mask_text_some_options -> f:format.html()}
+                                        {data.tx_mask_text_some_options -> f:format.raw()}
                                     </h2>
                                 </f:if>
                                 <f:if condition="{data.tx_mask_smaller_text}">
