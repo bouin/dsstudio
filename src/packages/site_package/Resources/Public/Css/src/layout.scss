@@ -393,3 +393,39 @@ nav .navbar-collapse {
   font-size: 3.5vw;
   line-height: 1.1;
 }
+.bck-blue {
+  background: $blue;
+}
+.font-84 {
+  font-family: $font1;
+  line-height: 1;
+}
+.frame-layout-6 .font-28 {
+  margin-bottom: 0px;
+}
+.arrow-sisi a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 34px;
+}
+.arrow-sisi a {
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0px; /* distance below the link */
+    transform: translateX(-50%);
+    width: 36px;
+    height: 25px;
+    background: url("../../Images/arrow.svg") no-repeat center center;
+    background-size: 36px 25px;
+    transition: $trans;
+  }
+  &:hover {
+    transition: $trans;
+    &:after {
+      transition: $trans;
+      left: 54%;
+    }
+  }
+}

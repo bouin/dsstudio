@@ -22,29 +22,40 @@ a {
   transition: all 0.3s ease-in-out;
   font-size: 18px;
   border-bottom: 1px solid transparent;
+  color: #252525;
+}
+a:hover {
+  color: #252525;
 }
 
+h1, h2, h3 {
+  font-family: "area_normal_semibold", sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+.h1,
 h1,
-h2,
-.like-h2,
-.like-h2 a {
-  font-size: 65px;
-  font-size: 5vw;
+.h2,
+h2 {
+  font-size: 30px;
 }
 @media screen and (min-width: 1200px) {
+  .h1,
   h1,
-  h2,
-  .like-h2,
-  .like-h2 a {
-    font-size: 58px;
+  .h2,
+  h2 {
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 768px) {
+  .h1,
   h1,
-  h2,
-  .like-h2,
-  .like-h2 a {
-    font-size: 8vw;
+  .h2,
+  h2 {
+    font-size: 21px;
   }
 }
 
@@ -105,6 +116,166 @@ h3 {
   }
 }
 
+.font-84,
+.font-84 * {
+  font-size: 84px;
+  line-height: 1.4;
+}
+@media screen and (max-width: 1200px) {
+  .font-84,
+  .font-84 * {
+    font-size: 63px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .font-84,
+  .font-84 * {
+    font-size: 45px;
+  }
+}
+
+.font-53,
+.font-53 * {
+  font-size: 53px;
+  line-height: 1.4;
+}
+@media screen and (max-width: 1200px) {
+  .font-53,
+  .font-53 * {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .font-53,
+  .font-53 * {
+    font-size: 42px;
+  }
+}
+
+.font-43,
+.font-43 * {
+  font-size: 43px;
+  line-height: 1.4;
+}
+@media screen and (max-width: 1200px) {
+  .font-43,
+  .font-43 * {
+    font-size: 39px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .font-43,
+  .font-43 * {
+    font-size: 34px;
+  }
+}
+
+.font-34,
+.font-34 * {
+  font-size: 34px;
+  line-height: 1.4;
+}
+@media screen and (max-width: 1200px) {
+  .font-34,
+  .font-34 * {
+    font-size: 31px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .font-34,
+  .font-34 * {
+    font-size: 27px;
+  }
+}
+
+.font-28,
+.font-28 * {
+  font-size: 28px;
+  line-height: 1.4;
+}
+@media screen and (max-width: 1200px) {
+  .font-28,
+  .font-28 * {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .font-28,
+  .font-28 * {
+    font-size: 22px;
+  }
+}
+
+.font-15,
+.font-15 * {
+  font-size: 15px;
+  line-height: 1.4;
+}
+@media screen and (max-width: 1200px) {
+  .font-15,
+  .font-15 * {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .font-15,
+  .font-15 * {
+    font-size: 14px;
+  }
+}
+
+.font-17,
+.font-17 * {
+  font-size: 17px;
+  line-height: 1.4;
+}
+@media screen and (max-width: 1200px) {
+  .font-17,
+  .font-17 * {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .font-17,
+  .font-17 * {
+    font-size: 15px;
+  }
+}
+
+.line-height-1-2, .line-height-1-2 * {
+  line-height: 1.2;
+}
+
+.like-h2,
+.like-h2 h2,
+.like-h2 a {
+  font-size: 65px;
+  font-size: 5vw;
+}
+@media screen and (min-width: 1200px) {
+  .like-h2,
+  .like-h2 h2,
+  .like-h2 a {
+    font-size: 58px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .like-h2,
+  .like-h2 h2,
+  .like-h2 a {
+    font-size: 8vw;
+  }
+}
+
+p i {
+  line-height: 0 !important;
+}
+
+@media screen and (min-width: 1200px) {
+  .font-84, .font-84 * {
+    font-size: 7.3vw !important;
+  }
+}
 nav .nav-item {
   padding-left: 10px !important;
   padding-right: 10px !important;
@@ -126,7 +297,7 @@ nav .nav-link {
   text-transform: uppercase;
   color: #252525;
 }
-@media screen and (max-width: 991.9px) {
+@media screen and (max-width: 1200px) {
   nav .nav-link {
     font-size: 23px;
   }
@@ -136,7 +307,7 @@ nav .nav-link {
     font-size: 17px;
   }
 }
-@media screen and (max-width: 767.9px) {
+@media screen and (max-width: 992px) {
   nav .nav-link {
     font-size: 21px;
   }
@@ -167,7 +338,7 @@ nav.new-colors .navbar-toggler.collapsed #nav-icon span {
     padding-bottom: 17px;
   }
 }
-@media screen and (max-width: 991.9px) {
+@media screen and (max-width: 1200px) {
   .navbar {
     padding-top: 12px;
     padding-bottom: 25px;
@@ -212,7 +383,7 @@ nav.new-colors .navbar-toggler.collapsed #nav-icon span {
   background: #252525;
 }
 
-@media screen and (max-width: 991.9px) {
+@media screen and (max-width: 1200px) {
   .navbar-toggler #nav-icon {
     width: 30px;
     height: 22px;
@@ -229,7 +400,7 @@ body.modal-open .navbar-toggler #nav-icon span:nth-child(2) {
   top: 5px;
 }
 
-@media screen and (max-width: 991.9px) {
+@media screen and (max-width: 1200px) {
   .navbar-collapse {
     position: absolute;
     top: 35px;
@@ -239,12 +410,12 @@ body.modal-open .navbar-toggler #nav-icon span:nth-child(2) {
   }
 }
 
-@media screen and (max-width: 991.9px) {
+@media screen and (max-width: 1200px) {
   .nav-item .nav-link {
     display: inline-block !important;
   }
 }
-@media screen and (max-width: 991.9px) {
+@media screen and (max-width: 1200px) {
   .nav-item:first-of-type {
     padding-top: 0;
   }
@@ -2798,13 +2969,13 @@ p:not(.like-h2) a {
   font-size: 5.9vw;
   text-indent: 5.875rem;
 }
-@media screen and (max-width: 991.9px) {
+@media screen and (max-width: 1200px) {
   #c13 h2 {
     font-size: 3.6vw;
     text-indent: 2.875rem;
   }
 }
-@media screen and (max-width: 767.9px) {
+@media screen and (max-width: 992px) {
   #c13 h2 {
     font-size: 4vw;
   }
@@ -2948,13 +3119,13 @@ nav .navbar-collapse {
     max-width: 90%;
   }
 }
-@media (max-width: 767.9px) {
+@media (max-width: 992px) {
   .col-12 .col-12 .col-12 {
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
 }
-@media (max-width: 767.9px) {
+@media (max-width: 992px) {
   .social-row .button-david {
     min-width: unset;
     font-size: 15px;
@@ -3012,7 +3183,7 @@ nav .navbar-collapse {
 .padd-for-text {
   padding-top: 6.5vw;
 }
-@media screen and (max-width: 991.9px) {
+@media screen and (max-width: 1200px) {
   .padd-for-text {
     padding-top: 8.5vw;
   }
@@ -3047,4 +3218,43 @@ nav .navbar-collapse {
 .size-big *, .size-big {
   font-size: 3.5vw;
   line-height: 1.1;
+}
+
+.bck-blue {
+  background: #BFDAEB;
+}
+
+.font-84 {
+  font-family: "editorial_regular", Arial, Helvetica, serif;
+  line-height: 1;
+}
+
+.frame-layout-6 .font-28 {
+  margin-bottom: 0px;
+}
+
+.arrow-sisi a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 34px;
+}
+
+.arrow-sisi a:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0px; /* distance below the link */
+  transform: translateX(-50%);
+  width: 36px;
+  height: 25px;
+  background: url("../../Images/arrow.svg") no-repeat center center;
+  background-size: 36px 25px;
+  transition: all 0.3s ease-in-out;
+}
+.arrow-sisi a:hover {
+  transition: all 0.3s ease-in-out;
+}
+.arrow-sisi a:hover:after {
+  transition: all 0.3s ease-in-out;
+  left: 54%;
 }

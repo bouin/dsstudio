@@ -12,6 +12,8 @@ editor:
                 # block level styles
                 - { name: "Like H2", element: "p", classes: [ 'like-h2' ] }
                 - { name: "Font smaller", element: "p", classes: [ 'font-smaller' ] }
+                - { name: "Font 84", element: "p", classes: [ 'font-84' ] }
+                - { name: "Font 28", element: "p", classes: [ 'font-28' ] }
                 # Inline styles
                 - { name: "Bold (table row)", element: "tr", classes: [ 'dipa-muted' ] }
 

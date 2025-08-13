@@ -174,10 +174,20 @@
                     "colorOverlay": "#000000",
                     "columns": [
                         "header",
-                        "tx_mask_text_some_options"
+                        "tx_mask_text_some_options",
+                        "tx_mask_smaller_text",
+                        "tx_mask_bck_color",
+                        "tx_mask_text_for_linek",
+                        "tx_mask_linkus_lik",
+                        "tx_mask_page_less_wide"
                     ],
                     "description": "",
                     "descriptions": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
                         "",
                         ""
                     ],
@@ -187,7 +197,12 @@
                     "label": "Text",
                     "labels": [
                         "",
-                        "Text \u2013\u00a0one col."
+                        "Text \u2013\u00a0one col.",
+                        "Smaller Text",
+                        "",
+                        "Text Link",
+                        "Link",
+                        "Less wide"
                     ],
                     "shortLabel": "",
                     "sorting": 5
@@ -201,10 +216,12 @@
                         "tx_mask_first_columnus",
                         "tx_mask_second_columnus",
                         "tx_mask_text_for_link",
-                        "tx_mask_link_link"
+                        "tx_mask_link_link",
+                        "tx_mask_daa_add_line"
                     ],
                     "description": "",
                     "descriptions": [
+                        "",
                         "",
                         "",
                         "",
@@ -222,7 +239,8 @@
                         "1 col.",
                         "2. col",
                         "Text for link",
-                        "Link"
+                        "Link",
+                        "Add line"
                     ],
                     "shortLabel": "",
                     "sorting": 6
@@ -261,6 +279,11 @@
                 }
             },
             "sql": {
+                "tx_mask_bck_color": {
+                    "tt_content": {
+                        "tx_mask_bck_color": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
                 "tx_mask_biggger_text": {
                     "tt_content": {
                         "tx_mask_biggger_text": "mediumtext"
@@ -269,6 +292,11 @@
                 "tx_mask_clients_all": {
                     "tt_content": {
                         "tx_mask_clients_all": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_daa_add_line": {
+                    "tt_content": {
+                        "tx_mask_daa_add_line": "int(11) DEFAULT '0' NOT NULL"
                     }
                 },
                 "tx_mask_first_col": {
@@ -299,6 +327,16 @@
                 "tx_mask_link_link": {
                     "tt_content": {
                         "tx_mask_link_link": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_linkus_lik": {
+                    "tt_content": {
+                        "tx_mask_linkus_lik": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_page_less_wide": {
+                    "tt_content": {
+                        "tx_mask_page_less_wide": "int(11) DEFAULT '0' NOT NULL"
                     }
                 },
                 "tx_mask_portrait_1_text_below": {
@@ -341,6 +379,16 @@
                         "tx_mask_section_with_keywords": "int(11) unsigned DEFAULT '0' NOT NULL"
                     }
                 },
+                "tx_mask_smaller_text": {
+                    "tt_content": {
+                        "tx_mask_smaller_text": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_text_for_linek": {
+                    "tt_content": {
+                        "tx_mask_text_for_linek": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
                 "tx_mask_text_for_link": {
                     "tt_content": {
                         "tx_mask_text_for_link": "varchar(255) DEFAULT '' NOT NULL"
@@ -368,6 +416,36 @@
                     "fullKey": "header",
                     "key": "header",
                     "type": "string"
+                },
+                "tx_mask_bck_color": {
+                    "config": {
+                        "fieldWizard": {
+                            "selectIcons": {
+                                "disabled": 1
+                            }
+                        },
+                        "items": [
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "white",
+                                "value": "white"
+                            },
+                            {
+                                "description": "",
+                                "group": "",
+                                "icon": "",
+                                "label": "blue",
+                                "value": "blue"
+                            }
+                        ],
+                        "renderType": "selectSingle",
+                        "type": "select"
+                    },
+                    "fullKey": "tx_mask_bck_color",
+                    "key": "bck_color",
+                    "type": "select"
                 },
                 "tx_mask_biggger_text": {
                     "config": {
@@ -405,6 +483,15 @@
                     "fullKey": "tx_mask_clients_all",
                     "key": "clients_all",
                     "type": "inline"
+                },
+                "tx_mask_daa_add_line": {
+                    "config": {
+                        "items": [],
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_daa_add_line",
+                    "key": "daa_add_line",
+                    "type": "check"
                 },
                 "tx_mask_first_col": {
                     "config": {
@@ -472,6 +559,24 @@
                     "fullKey": "tx_mask_link_link",
                     "key": "link_link",
                     "type": "link"
+                },
+                "tx_mask_linkus_lik": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "link"
+                    },
+                    "fullKey": "tx_mask_linkus_lik",
+                    "key": "linkus_lik",
+                    "type": "link"
+                },
+                "tx_mask_page_less_wide": {
+                    "config": {
+                        "items": [],
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_page_less_wide",
+                    "key": "page_less_wide",
+                    "type": "check"
                 },
                 "tx_mask_portrait_1_text_below": {
                     "config": {
@@ -582,6 +687,24 @@
                     "fullKey": "tx_mask_section_with_keywords",
                     "key": "section_with_keywords",
                     "type": "inline"
+                },
+                "tx_mask_smaller_text": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_smaller_text",
+                    "key": "smaller_text",
+                    "type": "string"
+                },
+                "tx_mask_text_for_linek": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_text_for_linek",
+                    "key": "text_for_linek",
+                    "type": "string"
                 },
                 "tx_mask_text_for_link": {
                     "config": {

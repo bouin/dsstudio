@@ -26,20 +26,28 @@ a {
   transition: $trans;
   font-size: $psize;
   border-bottom: 1px solid transparent;
+  color: $black;
+  &:hover{
+    color: $black;
+  }
 }
-
+h1,h2,h3 {
+  font-family: $font2;
+}
+h1 {
+  text-transform: uppercase;
+}
+.h1,
 h1,
-h2,
-.like-h2,
-.like-h2 a {
-  font-size: 65px;
-  font-size: 5vw;
-
+.h2,
+h2
+{
+  font-size: 30px;
   @media screen and (min-width: 1200px) {
-    font-size: 58px;
+    font-size: 28px;
   }
   @media screen and (max-width: 768px) {
-    font-size: 8vw;
+    font-size: 21px;
   }
 }
 
@@ -90,5 +98,59 @@ h3 {
   }
   @media screen and (max-width: $md){
     font-size: 27px;
+  }
+}
+
+// Breakpoints
+$lg: 1200px;
+$md: 992px;
+
+// Mixin for responsive font size
+@mixin responsive-font($class, $size, $lg-size, $md-size) {
+  .font-#{$class},
+  .font-#{$class} * {
+    font-size: #{$size}px;
+    line-height: 1.4;
+    @media screen and (max-width: $lg) {
+      font-size: #{$lg-size}px;
+    }
+    @media screen and (max-width: $md) {
+      font-size: #{$md-size}px;
+    }
+  }
+}
+
+// Generate classes
+@include responsive-font(84, 84, 63, 45);
+@include responsive-font(53, 53, 48, 42);
+@include responsive-font(43, 43, 39, 34);
+@include responsive-font(34, 34, 31, 27);
+@include responsive-font(28, 28, 25, 22);
+@include responsive-font(15, 15, 14, 14);
+@include responsive-font(17, 17, 16, 15);
+
+.line-height-1-2, .line-height-1-2 * {
+  line-height: 1.2;
+}
+
+.like-h2,
+.like-h2 h2,
+.like-h2 a
+{
+  font-size: 65px;
+  font-size: 5vw;
+  @media screen and (min-width: 1200px){
+    font-size: 58px;
+  }
+  @media screen and (max-width: 768px){
+    font-size: 8vw;
+  }
+}
+p i {
+   line-height: 0 !important;
+ }
+@media screen and (min-width: 1200px){
+  .font-84, .font-84 * {
+    font-size: 7.3vw !important;
   }
 }
