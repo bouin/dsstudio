@@ -6,38 +6,36 @@
 	=====================
 		Templates/News/List.html
 -->
-
-<f:section name="content">
-	<!--TYPO3SEARCH_end-->
-	<f:if condition="{news}">
-		<f:then>
-			<div class="news-list-view" id="news-container-{contentObjectData.uid}">
-				<f:if condition="{settings.hidePagination}">
-					<f:then>
-						<f:for each="{news}" as="newsItem" iteration="iterator">
-							<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-						</f:for>
-					</f:then>
-					<f:else>
-                        <f:if condition="{settings.list.paginate.insertAbove}">
-                            <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+    <f:section name="content">
+        <div class="container-fluid container-md">
+            <div class="row">
+                <div class="col-0 col-md-2"></div>
+                <div class="col-12 col-md-9 pb-40">
+                    <h1>
+                        Projekt-Index
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-0 col-md-2"></div>
+                    <div class="col-12 col-md-9">
+                        <!--TYPO3SEARCH_end-->
+                        <f:if condition="{news}">
+                            <f:then>
+                                <div class="news-list-view" id="news-container-{contentObjectData.uid}">
+                                    <f:if condition="{settings.hidePagination}">
+                                        <f:then>
+                                            <f:for each="{news}" as="newsItem" iteration="iterator">
+                                                <f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                            </f:for>
+                                        </f:then>
+                                    </f:if>
+                                </div>
+                            </f:then>
                         </f:if>
-                        <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
-                            <f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                        </f:for>
-                        <f:if condition="{settings.list.paginate.insertBelow}">
-                            <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
-                        </f:if>
-					</f:else>
-				</f:if>
-			</div>
-		</f:then>
-		<f:else>
-			<div class="no-news-found">
-				<f:translate key="list_nonewsfound" />
-			</div>
-		</f:else>
-	</f:if>
-	<!--TYPO3SEARCH_begin-->
+                        <!--TYPO3SEARCH_begin-->
+                </div>
+            </div>
+        </div>
 </f:section>
 </html>

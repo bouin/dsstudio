@@ -7,30 +7,29 @@
                     <source src="https://studiothompfister.com/fileadmin/user_upload/videos/Action_DSStudio_video.mp4" type="video/mp4">
                 </video>
                 <!--MENU-->
-                <div class="container-fluid pl-4 pb-5 pt-5 pt-md-0 pr-4">
-                    <div class="row h-100">
-                        <div class="col-12 ps-md-4 pe-md-4 pt-md-4 d-flex justify-content-center align-items-center align-items-md-start">
+                <div class="container-fluid pl-2 pr-2">
+                    <div class="row">
+                        <div class="col-12 ps-md-4 pe-md-4 pt-md-4 d-flex justify-content-center align-items-center align-items-md-start d-none d-md-flex">
                             <f:link.page pageUid="1" class="w-100">
                                 <f:image src="EXT:site_package/Resources/Public/Images/logo-white.svg" style="height:auto!important" class="w-100 h-auto"></f:image>
                             </f:link.page>
                         </div>
-                        <nav class="navbar navbar-expand-lg navbar-light ps-md-4 pe-md-4 changenr1 fixed-top" id="nav-nav-ok" style="margin-top: 0px;">
-                            <div class="container-fluid px-0 justify-content-center">
-                                <div class="row justify-content-end align-items-start w-100 font-uppercase font-white">
-                                    <div class="col-12 col-md-4 ps-0">
-                                        <p>Designing consent</p>
+                        <nav class="navbar ps-md-2 pe-md-2 changenr1 fixed-top" id="nav-nav-ok" style="margin-top: 0px;">
+                            <div class="container-fluid  justify-content-center">
+                                <div class="row justify-content-end align-items-start font-uppercase font-white">
+                                    <div class="col-4 col-md-4 menusub d-flex justify-content-start justify-content-md-start d-flex d-md-none">
+                                        <f:link.page pageUid="1" class="w-100">
+                                            <f:image src="EXT:site_package/Resources/Public/Images/logo-white.svg" style="height:auto!important" class="w-100 h-auto"></f:image>
+                                        </f:link.page>
                                     </div>
-                                    <div class="col-12 col-md-8 from-here jutify-content-end align-items-start pe-0">
-                                        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                                            <div id="nav-icon" class="mobile-margin">
-                                                <span></span>
-                                                <span></span>
-                                            </div>
-                                        </button>
-                                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <div class="col-12 col-md-4 d-none d-md-flex mb-0">
 
-                                                <f:cObject typoscriptObjectPath="lib.mainNavigation"></f:cObject>
+                                            <p class="mb-0">Designing consent</p>
 
+                                    </div>
+                                    <div class="col-8 col-md-8 from-here jutify-content-end align-self-center align-items-center">
+                                        <div class="d-flex flex-row justify-content-end justify-content-md-end align-items-end align-items-center" id="navbarSupportedContent">
+                                            <f:cObject typoscriptObjectPath="lib.mainNavigation"></f:cObject>
                                         </div>
                                     </div>
                                 </div>
@@ -39,8 +38,11 @@
                         <!--MENU-->
                     </div>
                 </div>
-
-
+                <div class="position-absolute top-50 start-50 translate-middle d-flex d-md-none">
+                    <div class="col-12 col-md-4 text-white font-home mb-0">
+                        <h1 class="mb-0">Designing consent</h1>
+                    </div>
+                </div>
             </header>
         </f:then>
         <f:else>
@@ -49,26 +51,23 @@
 
                 <div class="header">
                     <!--MENU-->
-                    <nav class="navbar navbar-expand-lg navbar-light ps-md-4 pe-md-4 changenr1 fixed-top" id="nav-nav-ok" style="margin-top: 0px;">
+                    <nav class="navbar ps-md-2 pe-md-2 changenr1 fixed-top" id="nav-nav-ok" style="margin-top: 0px;">
                         <div class="container-fluid  ">
-                            <div class="row w-100">
-                                <div class="col-12 col-md-4 menusub">
+                            <div class="row ">
+                                <div class="col-4 col-md-4 menusub d-flex justify-content-start justify-content-md-start align-items-center">
                                     <f:link.page pageUid="1" class="w-100">
                                         <f:image src="EXT:site_package/Resources/Public/Images/logo.svg" style="height:auto!important" class="w-100 h-auto"></f:image>
                                     </f:link.page>
                                 </div>
-                                <div class="col-12 col-md-8 from-here justify-content-end align-items-end">
+                                <div class="d-none d-md-flex col-md-4 text-uppercase text-center font-16 font-area justify-content-center align-items-center">
+                                    <f:link.page pageUid="1" class="">
+                                        Designing Consent
+                                    </f:link.page>
+                                </div>
+                                <div class="col-8 col-md-4 from-here justify-content-end align-self-center align-items-center">
                                     <div>
-                                        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                                            <div id="nav-icon" class="mobile-margin">
-                                                <span></span>
-                                                <span></span>
-                                            </div>
-                                        </button>
-                                        <div class="collapse navbar-collapse justify-content-end align-items-end"  id="navbarSupportedContent">
-
+                                        <div class="d-flex flex-row justify-content-end justify-content-md-end align-items-end align-items-center"  id="navbarSupportedContent">
                                             <f:cObject typoscriptObjectPath="lib.mainNavigation"></f:cObject>
-
                                         </div>
                                     </div>
                                 </div>
@@ -100,26 +99,23 @@
                 <f:else>
                     <div class="">
                         <!--MENU-->
-                        <nav class="navbar navbar-expand-lg navbar-light ps-md-4 pe-md-4 changenr1 fixed-top" id="nav-nav-ok" style="margin-top: 0px;">
+                        <nav class="navbar navbar-expand navbar-light ps-md-2 pe-md-2 changenr1 fixed-top" id="nav-nav-ok" style="margin-top: 0px;">
                             <div class="container-fluid  ">
-                                <div class="row w-100">
-                                    <div class="col-12 col-md-4 menusub">
+                                <div class="row ">
+                                    <div class="col-4 col-md-4 menusub d-flex justify-content-start justify-content-md-start  d-flex d-md-none">
                                         <f:link.page pageUid="1" class="w-100">
                                             <f:image src="EXT:site_package/Resources/Public/Images/logo.svg" style="height:auto!important" class="w-100 h-auto"></f:image>
                                         </f:link.page>
                                     </div>
-                                    <div class="col-12 col-md-8 from-here justify-content-end align-items-end">
+                                    <div class="d-none d-md-flex col-md-4 text-uppercase text-center font-16 font-area justify-content-center align-items-center">
+                                        <f:link.page pageUid="1" class="">
+                                            Designing Consent
+                                        </f:link.page>
+                                    </div>
+                                    <div class="col-8 col-md-8 from-here justify-content-end align-self-center align-items-center">
                                         <div>
-                                            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                                                <div id="nav-icon" class="mobile-margin">
-                                                    <span></span>
-                                                    <span></span>
-                                                </div>
-                                            </button>
-                                            <div class="collapse navbar-collapse justify-content-end align-items-end"  id="navbarSupportedContent">
-
+                                            <div class="d-flex flex-row justify-content-end justify-content-md-end align-items-end align-items-center"  id="navbarSupportedContent">
                                                 <f:cObject typoscriptObjectPath="lib.mainNavigation"></f:cObject>
-
                                             </div>
                                         </div>
                                     </div>

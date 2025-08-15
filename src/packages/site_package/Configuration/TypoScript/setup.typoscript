@@ -203,6 +203,8 @@ page {
         site_package_bt = EXT:site_package/Resources/Public/Css/libs/bootstrap.min.css
         site_package_swiper_css = EXT:site_package/Resources/Public/Css/libs/swiper-bundle.min.css
         site_package_style = EXT:site_package/Resources/Public/Css/dest/app.css
+        video = https://vjs.zencdn.net/8.5.2/video-js.css
+        video.external = 1
     }
 
     includeJSLibs {
@@ -214,6 +216,8 @@ page {
         site_package_bundle = EXT:site_package/Resources/Public/JavaScript/libs/bootstrap.bundle.min.js
         #site_package_app = EXT:site_package/Resources/Public/JavaScript/dest/app.min.js
         site_package_app = EXT:site_package/Resources/Public/JavaScript/src/app.js
+        video_js = https://vjs.zencdn.net/8.5.2/video.min.js
+        video_js.external = 1
     }
 
 }

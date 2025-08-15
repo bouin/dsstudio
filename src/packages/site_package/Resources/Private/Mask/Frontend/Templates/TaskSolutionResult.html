@@ -1,18 +1,41 @@
-<f:if condition="{data.tx_mask_aufgabe}">
-    {data.tx_mask_aufgabe}
-</f:if>
-<f:if condition="{data.tx_mask_aufgabe_text}">
-    {data.tx_mask_aufgabe_text -> f:format.html()}
-</f:if>
-<f:if condition="{data.tx_mask_loesung}">
-    {data.tx_mask_loesung}
-</f:if>
-<f:if condition="{data.tx_mask_text_aufgabe}">
-    {data.tx_mask_text_aufgabe -> f:format.html()}
-</f:if>
-<f:if condition="{data.tx_mask_result_elo}">
-    {data.tx_mask_result_elo}
-</f:if>
-<f:if condition="{data.tx_mask_text_result}">
-    {data.tx_mask_text_result -> f:format.html()}
-</f:if>
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <div id="c{data.uid}" class="bck-{data.tx_mask_bck_color} mask-element frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+        <div class="container-fluid container-md pt-100">
+            <div class="row pb-100">
+                <div class="col-12 col-md-1"></div>
+                <div class="col-12 col-md-8">
+                    <div class="row1 pb-40">
+                        <f:if condition="{data.tx_mask_aufgabe}">
+                            <h2 class="text-34 font-34 text-uppercase pb-2">{data.tx_mask_aufgabe}</h2>
+                        </f:if>
+                        <f:if condition="{data.tx_mask_aufgabe_text}">
+                            {data.tx_mask_aufgabe_text -> f:format.html()}
+                        </f:if>
+                    </div>
+                    <div class="row2">
+                        <f:if condition="{data.tx_mask_loesung}">
+                            <h2 class="text-34 font-34 text-uppercase pb-2">{data.tx_mask_loesung}</h2>
+                        </f:if>
+                        <f:if condition="{data.tx_mask_text_aufgabe}">
+                            {data.tx_mask_text_aufgabe -> f:format.html()}
+                        </f:if>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid pb-100">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <f:if condition="{data.tx_mask_result_elo}">
+                        <h2 class="text-34 font-34 text-uppercase pb-20">{data.tx_mask_result_elo}</h2>
+                    </f:if>
+                </div>
+                <div class="col-12 text-center font-43 text-editorial line-height-1-2">
+                    <f:if condition="{data.tx_mask_text_result}">
+                        {data.tx_mask_text_result -> f:format.html()}
+                    </f:if>
+                </div>
+            </div>
+        </div>
+    </div>
+</html>

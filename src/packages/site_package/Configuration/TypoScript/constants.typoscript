@@ -44,3 +44,15 @@ styles.content.imgtext.maxWInText = 1920
 
 styles.content.textmedia.maxW = 1920
 styles.content.textmedia.maxWInText = 1920
+
+##############
+###NEWSNEWS###
+##############
+
+plugin.tx_news {
+    view {
+        templateRootPath = EXT:site_package/Resources/Private/news/Templates/
+        partialRootPath = EXT:site_package/Resources/Private/news/Partials/
+        layoutRootPath = EXT:site_package/Resources/Private/news/Layouts/
+    }
+}

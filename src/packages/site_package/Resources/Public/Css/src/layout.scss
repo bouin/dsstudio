@@ -36,12 +36,12 @@ header.hedo {
   }
 }
 .page-14 .header,
-.page-15.header,
-.page-16.header
+.page-15 .header,
+.page-16 .header
 {
   background: $blue;
 }
-.header {
+.header:not(.news-header) {
   height: 100vh;
   max-height: 1200px;
   min-height: 800px;
@@ -70,12 +70,23 @@ header.hedo {
     }
   }
   background: $black;
-  padding-top: 60px;
   padding-top: 6vw;
-  padding-bottom: 2vw;
+
+  padding-bottom: 5px;
   a,div,p,h2,h3,h1 {
     color: $beige;
   }
+}
+@media screen and (max-width: 600px){
+  .footer_kontakt {
+
+    padding-top: 11vw;
+    padding-bottom: 10px;
+  }
+  .pt-40 {
+    padding-top: 35px !important;
+  }
+
 }
 .like-h2 {
     font-family: $font1;
@@ -103,17 +114,15 @@ p:not(.like-h2) a {
 .button-david {
   font-size: 15px;
    font-family: $font2;
-  padding-right: 20px;
-  padding-left: 20px;
+  margin-right: 25px;
+  margin-left: 25px;
    text-transform: uppercase;
   text-align: center;
-  margin-left: 5px;
-  margin-right: 5px;
   transition: $trans;
   border-bottom: 1px solid transparent;
   &:hover {
     transition: $trans;
-    border-bottom: 1px solid white;
+    font-family: $font2italic;
   }
 }
 .social-row {
@@ -156,10 +165,6 @@ p:not(.like-h2) a {
 .font-15 {
   div,a,p,span{
     font-size: 15px;
-    @media screen and (max-width: 992px) {
-      font-size: 18px;
-      font-size: 18px;
-    }
   }
 }
 #c13 h2 {
@@ -240,6 +245,9 @@ p:not(.like-h2) a {
 }
 
 @media screen and (min-width: 991.9px) {
+  .navbar-nav .nav-item:last-of-type {
+    padding-right: 0px !important;
+  }
   .new-colors {
     .nav-item .nav-link {
       color: $beige !important;
@@ -251,6 +259,7 @@ p:not(.like-h2) a {
   }
 }
 @media screen and (max-width: 991.9px) {
+
   .navbar-collapse {
     display: flex;
     justify-content: center;
@@ -304,12 +313,19 @@ nav .navbar-collapse {
   .container, .container-sm {
     max-width: 90%;
   }
+
+}
+@media (max-width: 759.9px) {
+  .nopadpp p{
+    margin-bottom: 0px;
+  }
 }
 @media (max-width: $md) {
   .col-12 .col-12 .col-12 {
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
+
 }
 .social-row {
    .button-david {
@@ -341,6 +357,7 @@ nav .navbar-collapse {
   z-index: -1;
 }
 
+
 .hedo .container-fluid,
 .hedo nav {
   position: relative;
@@ -353,7 +370,7 @@ nav .navbar-collapse {
 }
 
 .menusub img {
-  width: 120px !important;
+  width: 104px !important;
 }
 .font-uppercase * {
   text-transform: uppercase;
@@ -382,7 +399,7 @@ nav .navbar-collapse {
   font-style: italic;
 }
 .mailchimp {
-  background: #f4f4f4;
+  /*background: #f4f4f4;*/
 }
 .page-1 .mailchimp {
   background: $blue;
@@ -398,6 +415,7 @@ nav .navbar-collapse {
   font-size: 3.5vw;
   line-height: 1.1;
 }
+
 .bck-blue {
   background: $blue;
 }
@@ -412,6 +430,7 @@ nav .navbar-collapse {
   position: relative;
   display: inline-block;
   padding-bottom: 34px;
+  font-size: 16px;
 }
 .arrow-sisi a {
   &:after {
@@ -434,8 +453,183 @@ nav .navbar-collapse {
     }
   }
 }
-
 .line {
   border-bottom: 1px solid $black;
   padding-top: 20px;
+}
+.video-js {
+  width: 100% !important;
+  height: auto !important;
+}
+.video-js .vjs-tech, .video-js.vjs-fill:not(.vjs-audio-only-mode) {
+  height: 100%;
+  width: 100%;
+}
+.video-js .vjs-tech {
+  position: absolute; /* keep this! */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or 'contain' */
+}
+/* Make the big play button round with white background */
+.video-js .vjs-big-play-button {
+  width: 80px !important;              /* size of the button */
+  height: 80px !important;
+  border-radius: 50% !important;       /* round shape */
+  background-color: white !important;  /* white background */
+  border: none;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.video-js .vjs-big-play-button:hover {
+  opacity: 1;
+}
+
+/* Black triangle in the middle */
+.video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+  color: black;             /* triangle color */
+  font-size: 3rem;          /* size of the triangle */
+  line-height: 80px;        /* vertically center the triangle */
+}
+
+/* Remove default borders/shadows from Video.js theme */
+.video-js .vjs-big-play-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+.article-news {
+  &:first-of-type {
+    border-top:1px solid $black;
+  }
+  .mainheader {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom:1px solid $black;
+  }
+}
+.article-news .headline {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  &::before {
+    content: "+";
+    display: inline-block;
+    margin-right: 0.6em;
+    transition: transform 0.3s ease; /* smooth rotation */
+    transform-origin: center center; /* rotate around its center */
+  }
+
+  &:hover::before {
+    transform: rotate(180deg);
+  }
+}
+.page-19 .article-news .mainheader {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.frame-layout-6 p.font-28 {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl
+{
+display: unset !important;
+}
+.team a {
+  &:hover {
+    font-family: $font2italic;
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .arrow-sisi {
+    margin-top: 20px;
+  }
+  #c2 p br {
+    display: none;
+  }
+  .size-big *, .size-big{
+    font-size: 5.5vw;
+    line-height: 1.1;
+  }
+  .font-home h1{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-size: 5.5vw;
+    line-height: 1.1;
+    text-align: center;
+    font-family: "editorial_regular", Arial, Helvetica, serif;
+    text-transform: capitalize;
+  }
+  #c45 h1 {
+    display: none;
+  }
+}
+.text-white *, .text-white {
+  color: white;
+}
+.submit {
+  background: transparent;
+  border: 1px solid transparent;
+  color: $black;
+  font-family: $font1;
+  border: none !important;
+  margin: 0px !important;
+  &:hover {
+    background: transparent;
+    font-style: italic;
+  }
+}
+#mc_embed_signup .foot {
+  display: grid;
+  grid-template-columns: 1fr !important;
+  width: 96% !important;
+  justify-items: center !important;
+  align-items: center !important;
+}
+#mce-EMAIL {
+  border: none !important;
+  padding-top: 30px !important;
+  border-bottom: 1px solid $black !important;
+   border-radius: 0px !important;
+  background: transparent !important;
+}
+#mc-embedded-subscribe-form {
+  margin: 0px !important;
+}
+#mc_embed_signup .mc-field-group {
+  padding-bottom: 30px !important;
+}
+#mc_embed_signup .asterisk {
+  color: $black !important;
+}
+#mc_embed_signup .mc-field-group input:focus,
+#mc_embed_signup .mc-field-group input:focus-visible,
+#mc_embed_signup .mc-field-group input:active
+{
+  border: none !important;
+  border-bottom: 1px solid $black !important;
+  outline: none !important;
+}
+#mce-EMAIL:focus-visible {
+  border: none !important;
+  border-bottom: 1px solid $black !important;
+  outline: none !important;
+}
+.mce_inline_error {
+  color: deeppink !important;
+  background: transparent !important;
+}
+#mce-EMAIL::placeholder {
+  color: $black;
+  opacity: 1;
+}
+#mc_embed_signup .mc-field-group {
+  width: 100% !important;
+}
+#mc_embed_signup .indicates-required {
+  margin-right: 0% !important;
 }

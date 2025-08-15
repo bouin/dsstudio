@@ -40,29 +40,7 @@ h1 {
 h1,
 .h2,
 h2 {
-  font-size: 30px;
-}
-@media screen and (min-width: 1200px) {
-  .h1,
-  h1,
-  .h2,
-  h2 {
-    font-size: 28px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .h1,
-  h1,
-  .h2,
-  h2 {
-    font-size: 21px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: 9vw;
-  }
+  font-size: 28px;
 }
 
 p {
@@ -130,7 +108,7 @@ h3 {
 @media screen and (max-width: 992px) {
   .font-84,
   .font-84 * {
-    font-size: 45px;
+    font-size: 54px;
   }
 }
 
@@ -148,7 +126,7 @@ h3 {
 @media screen and (max-width: 992px) {
   .font-53,
   .font-53 * {
-    font-size: 42px;
+    font-size: 33px;
   }
 }
 
@@ -166,7 +144,7 @@ h3 {
 @media screen and (max-width: 992px) {
   .font-43,
   .font-43 * {
-    font-size: 34px;
+    font-size: 31px;
   }
 }
 
@@ -242,6 +220,42 @@ h3 {
   }
 }
 
+.font-18,
+.font-18 * {
+  font-size: 18px;
+  line-height: 1.4;
+}
+@media screen and (max-width: 1200px) {
+  .font-18,
+  .font-18 * {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .font-18,
+  .font-18 * {
+    font-size: 18px;
+  }
+}
+
+.font-16,
+.font-16 * {
+  font-size: 16px;
+  line-height: 1.4;
+}
+@media screen and (max-width: 1200px) {
+  .font-16,
+  .font-16 * {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .font-16,
+  .font-16 * {
+    font-size: 16px;
+  }
+}
+
 .line-height-1-2, .line-height-1-2 * {
   line-height: 1.2;
 }
@@ -276,6 +290,11 @@ p i {
     font-size: 7.3vw !important;
   }
 }
+@media screen and (max-width: 578px) {
+  .font-84, .font-84 * {
+    font-size: 10.3vw !important;
+  }
+}
 nav .nav-item {
   padding-left: 10px !important;
   padding-right: 10px !important;
@@ -293,24 +312,9 @@ nav .nav-item a {
   padding: 0 !important;
 }
 nav .nav-link {
-  font-size: 19px;
+  font-size: 16px;
   text-transform: uppercase;
   color: #252525;
-}
-@media screen and (max-width: 1200px) {
-  nav .nav-link {
-    font-size: 23px;
-  }
-}
-@media screen and (min-width: 1600px) {
-  nav .nav-link {
-    font-size: 17px;
-  }
-}
-@media screen and (max-width: 992px) {
-  nav .nav-link {
-    font-size: 21px;
-  }
 }
 nav .nav-link:hover {
   font-family: "area_normal_semibold_italic", sans-serif !important;
@@ -400,7 +404,7 @@ body.modal-open .navbar-toggler #nav-icon span:nth-child(2) {
   top: 5px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 991.9px) {
   .navbar-collapse {
     position: absolute;
     top: 35px;
@@ -496,19 +500,29 @@ html {
   padding-top: 8vw;
   margin-top: 0;
 }
-@media screen and (max-width: 575.9px) {
+
+@media screen and (max-width: 992px) {
   .frame-space-before-extra-large {
-    padding-top: 14vw;
+    padding-top: 16vw;
   }
 }
-
+@media screen and (max-width: 575.9px) {
+  .frame-space-before-extra-large {
+    padding-top: 12vw;
+  }
+}
 .frame-space-after-extra-large {
   padding-bottom: 8vw;
   margin-bottom: 0;
 }
+@media screen and (max-width: 992px) {
+  .frame-space-after-extra-large {
+    padding-bottom: 16vw;
+  }
+}
 @media screen and (max-width: 575.9px) {
   .frame-space-after-extra-large {
-    padding-bottom: 14vw;
+    padding-bottom: 16vw;
   }
 }
 
@@ -2830,12 +2844,12 @@ header.hedo {
 }
 
 .page-14 .header,
-.page-15.header,
-.page-16.header {
+.page-15 .header,
+.page-16 .header {
   background: #BFDAEB;
 }
 
-.header {
+.header:not(.news-header) {
   height: 100vh;
   max-height: 1200px;
   min-height: 800px;
@@ -2848,9 +2862,8 @@ header.hedo {
 
 .footer_kontakt {
   background: #252525;
-  padding-top: 60px;
   padding-top: 6vw;
-  padding-bottom: 2vw;
+  padding-bottom: 5px;
 }
 .footer_kontakt #c2 p a,
 .footer_kontakt #c27 p a {
@@ -2870,6 +2883,15 @@ header.hedo {
   color: white;
 }
 
+@media screen and (max-width: 600px) {
+  .footer_kontakt {
+    padding-top: 11vw;
+    padding-bottom: 10px;
+  }
+  .pt-40 {
+    padding-top: 35px !important;
+  }
+}
 .like-h2 {
   font-family: "editorial_regular", Arial, Helvetica, serif;
 }
@@ -2900,18 +2922,16 @@ p:not(.like-h2) a {
 .button-david {
   font-size: 15px;
   font-family: "area_normal_semibold", sans-serif;
-  padding-right: 20px;
-  padding-left: 20px;
+  margin-right: 25px;
+  margin-left: 25px;
   text-transform: uppercase;
   text-align: center;
-  margin-left: 5px;
-  margin-right: 5px;
   transition: all 0.3s ease-in-out;
   border-bottom: 1px solid transparent;
 }
 .button-david:hover {
   transition: all 0.3s ease-in-out;
-  border-bottom: 1px solid white;
+  font-family: "area_normal_semibold_italic", sans-serif;
 }
 
 .social-row {
@@ -2962,12 +2982,6 @@ p:not(.like-h2) a {
 
 .font-15 div, .font-15 a, .font-15 p, .font-15 span {
   font-size: 15px;
-}
-@media screen and (max-width: 992px) {
-  .font-15 div, .font-15 a, .font-15 p, .font-15 span {
-    font-size: 18px;
-    font-size: 18px;
-  }
 }
 
 #c13 h2 {
@@ -3060,6 +3074,9 @@ p:not(.like-h2) a {
 }
 
 @media screen and (min-width: 991.9px) {
+  .navbar-nav .nav-item:last-of-type {
+    padding-right: 0px !important;
+  }
   .new-colors .nav-item .nav-link {
     color: white !important;
   }
@@ -3124,6 +3141,11 @@ nav .navbar-collapse {
     max-width: 90%;
   }
 }
+@media (max-width: 759.9px) {
+  .nopadpp p {
+    margin-bottom: 0px;
+  }
+}
 @media (max-width: 992px) {
   .col-12 .col-12 .col-12 {
     padding-left: 0px !important;
@@ -3170,7 +3192,7 @@ nav .navbar-collapse {
 }
 
 .menusub img {
-  width: 120px !important;
+  width: 104px !important;
 }
 
 .font-uppercase * {
@@ -3204,7 +3226,7 @@ nav .navbar-collapse {
 }
 
 .mailchimp {
-  background: #f4f4f4;
+  /*background: #f4f4f4;*/
 }
 
 .page-1 .mailchimp {
@@ -3242,6 +3264,7 @@ nav .navbar-collapse {
   position: relative;
   display: inline-block;
   padding-bottom: 34px;
+  font-size: 16px;
 }
 
 .arrow-sisi a:after {
@@ -3267,4 +3290,195 @@ nav .navbar-collapse {
 .line {
   border-bottom: 1px solid #252525;
   padding-top: 20px;
+}
+
+.video-js {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.video-js .vjs-tech, .video-js.vjs-fill:not(.vjs-audio-only-mode) {
+  height: 100%;
+  width: 100%;
+}
+
+.video-js .vjs-tech {
+  position: absolute; /* keep this! */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or 'contain' */
+}
+
+/* Make the big play button round with white background */
+.video-js .vjs-big-play-button {
+  width: 80px !important; /* size of the button */
+  height: 80px !important;
+  border-radius: 50% !important; /* round shape */
+  background-color: white !important; /* white background */
+  border: none;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.video-js .vjs-big-play-button:hover {
+  opacity: 1;
+}
+
+/* Black triangle in the middle */
+.video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+  color: black; /* triangle color */
+  font-size: 3rem; /* size of the triangle */
+  line-height: 80px; /* vertically center the triangle */
+}
+
+/* Remove default borders/shadows from Video.js theme */
+.video-js .vjs-big-play-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.article-news:first-of-type {
+  border-top: 1px solid #252525;
+}
+.article-news .mainheader {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #252525;
+}
+
+.article-news .headline {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.article-news .headline::before {
+  content: "+";
+  display: inline-block;
+  margin-right: 0.6em;
+  transition: transform 0.3s ease; /* smooth rotation */
+  transform-origin: center center; /* rotate around its center */
+}
+.article-news .headline:hover::before {
+  transform: rotate(180deg);
+}
+
+.page-19 .article-news .mainheader {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.frame-layout-6 p.font-28 {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.navbar > .container, .navbar > .container-fluid, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container-xl, .navbar > .container-xxl {
+  display: unset !important;
+}
+
+.team a:hover {
+  font-family: "area_normal_semibold_italic", sans-serif;
+}
+
+@media screen and (max-width: 767.9px) {
+  .arrow-sisi {
+    margin-top: 20px;
+  }
+  #c2 p br {
+    display: none;
+  }
+  .size-big *, .size-big {
+    font-size: 5.5vw;
+    line-height: 1.1;
+  }
+  .font-home h1 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-size: 5.5vw;
+    line-height: 1.1;
+    text-align: center;
+    font-family: "editorial_regular", Arial, Helvetica, serif;
+    text-transform: capitalize;
+  }
+  #c45 h1 {
+    display: none;
+  }
+}
+.text-white *, .text-white {
+  color: white;
+}
+
+.submit {
+  background: transparent;
+  border: 1px solid transparent;
+  color: #252525;
+  font-family: "editorial_regular", Arial, Helvetica, serif;
+  border: none !important;
+  margin: 0px !important;
+}
+.submit:hover {
+  background: transparent;
+  font-style: italic;
+}
+
+#mc_embed_signup .foot {
+  display: grid;
+  grid-template-columns: 1fr !important;
+  width: 96% !important;
+  justify-items: center !important;
+  align-items: center !important;
+}
+
+#mce-EMAIL {
+  border: none !important;
+  padding-top: 30px !important;
+  border-bottom: 1px solid #252525 !important;
+  border-radius: 0px !important;
+  background: transparent !important;
+}
+
+#mc-embedded-subscribe-form {
+  margin: 0px !important;
+}
+
+#mc_embed_signup .mc-field-group {
+  padding-bottom: 30px !important;
+}
+
+#mc_embed_signup .asterisk {
+  color: #252525 !important;
+}
+
+#mc_embed_signup .mc-field-group input:focus,
+#mc_embed_signup .mc-field-group input:focus-visible,
+#mc_embed_signup .mc-field-group input:active {
+  border: none !important;
+  border-bottom: 1px solid #252525 !important;
+  outline: none !important;
+}
+
+#mce-EMAIL:focus-visible {
+  border: none !important;
+  border-bottom: 1px solid #252525 !important;
+  outline: none !important;
+}
+
+.mce_inline_error {
+  color: deeppink !important;
+  background: transparent !important;
+}
+
+#mce-EMAIL::placeholder {
+  color: #252525;
+  opacity: 1;
+}
+
+#mc_embed_signup .mc-field-group {
+  width: 100% !important;
+}
+
+#mc_embed_signup .indicates-required {
+  margin-right: 0% !important;
 }

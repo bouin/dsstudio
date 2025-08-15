@@ -42,20 +42,10 @@ h1,
 .h2,
 h2
 {
-  font-size: 30px;
-  @media screen and (min-width: 1200px) {
-    font-size: 28px;
-  }
-  @media screen and (max-width: 768px) {
-    font-size: 21px;
-  }
+  font-size: 28px;
+
 }
 
-h1 {
-  @media screen and (max-width: 768px) {
-    font-size: 9vw;
-  }
-}
 
 p {
   font-family: $font2;
@@ -121,13 +111,15 @@ $md: 992px;
 }
 
 // Generate classes
-@include responsive-font(84, 84, 63, 45);
-@include responsive-font(53, 53, 48, 42);
-@include responsive-font(43, 43, 39, 34);
+@include responsive-font(84, 84, 63, 54);
+@include responsive-font(53, 53, 48, 33);
+@include responsive-font(43, 43, 39, 31);
 @include responsive-font(34, 34, 31, 27);
 @include responsive-font(28, 28, 25, 22);
 @include responsive-font(15, 15, 14, 14);
 @include responsive-font(17, 17, 16, 15);
+@include responsive-font(18, 18, 18, 18);
+@include responsive-font(16, 16, 16, 16);
 
 .line-height-1-2, .line-height-1-2 * {
   line-height: 1.2;
@@ -152,5 +144,10 @@ p i {
 @media screen and (min-width: 1200px){
   .font-84, .font-84 * {
     font-size: 7.3vw !important;
+  }
+}
+@media screen and (max-width: 578px){
+  .font-84, .font-84 * {
+    font-size: 10.3vw !important;
   }
 }

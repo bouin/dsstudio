@@ -7,7 +7,7 @@
 lib.mainNavigation = COA
 lib.mainNavigation {
     entryLevel = 0
-    wrap = <ul class="navbar-nav mb-2 mb-lg-0 d-block d-lg-flex text-center text-lg-left">|</ul>
+    wrap = <ul class="d-flex flex-row navbar-nav mb-lg-0 d-block d-lg-flex text-end text-lg-end">|</ul>
 
     20 = HMENU
     20 {

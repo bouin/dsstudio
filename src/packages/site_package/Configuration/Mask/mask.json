@@ -356,10 +356,12 @@
                     "color": "#000000",
                     "colorOverlay": "#000000",
                     "columns": [
-                        "tx_mask_video_link"
+                        "tx_mask_video_link",
+                        "tx_mask_video_poster_post"
                     ],
                     "description": "",
                     "descriptions": [
+                        "",
                         ""
                     ],
                     "icon": "",
@@ -367,7 +369,8 @@
                     "key": "video",
                     "label": "Video",
                     "labels": [
-                        "Video link (if direct from TYPO3, don't use Domain! Start with: \/fileadmin\/)"
+                        "Video link (if direct from TYPO3, don't use Domain! Start with: \/fileadmin\/)",
+                        "Image to be shown for start"
                     ],
                     "shortLabel": "",
                     "sorting": 8
@@ -547,6 +550,11 @@
                 "tx_mask_video_link": {
                     "tt_content": {
                         "tx_mask_video_link": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_video_poster_post": {
+                    "tt_content": {
+                        "tx_mask_video_poster_post": "int(11) unsigned DEFAULT '0' NOT NULL"
                     }
                 }
             },
@@ -975,6 +983,28 @@
                     "fullKey": "tx_mask_video_link",
                     "key": "video_link",
                     "type": "string"
+                },
+                "tx_mask_video_poster_post": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_video_poster_post",
+                    "imageoverlayPalette": 1,
+                    "key": "video_poster_post",
+                    "type": "file"
                 }
             }
         },
@@ -1123,41 +1153,105 @@
         },
         "tx_mask_section_team": {
             "sql": {
-                "tx_mask_email_usw_item": {
+                "tx_mask_descriipiion": {
                     "tx_mask_section_team": {
-                        "tx_mask_email_usw_item": "mediumtext"
+                        "tx_mask_descriipiion": "mediumtext"
                     }
                 },
-                "tx_mask_name_item": {
+                "tx_mask_emails_and_stuff": {
                     "tx_mask_section_team": {
-                        "tx_mask_name_item": "mediumtext"
+                        "tx_mask_emails_and_stuff": "mediumtext"
+                    }
+                },
+                "tx_mask_not_visible_only_for_decoriation": {
+                    "tx_mask_section_team": {
+                        "tx_mask_not_visible_only_for_decoriation": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_team_short_short": {
+                    "tx_mask_section_team": {
+                        "tx_mask_team_short_short": "mediumtext"
+                    }
+                },
+                "tx_mask_tema_image": {
+                    "tx_mask_section_team": {
+                        "tx_mask_tema_image": "int(11) unsigned DEFAULT '0' NOT NULL"
                     }
                 }
             },
             "tca": {
-                "tx_mask_email_usw_item": {
+                "tx_mask_descriipiion": {
                     "config": {
                         "enableRichtext": 1,
                         "type": "text"
                     },
-                    "fullKey": "tx_mask_email_usw_item",
+                    "fullKey": "tx_mask_descriipiion",
                     "inlineParent": "tx_mask_section_team",
-                    "key": "email_usw_item",
-                    "label": "Contact Email Phone",
-                    "order": 2,
+                    "key": "descriipiion",
+                    "label": "One text with name email and description",
+                    "order": 4,
                     "type": "richtext"
                 },
-                "tx_mask_name_item": {
+                "tx_mask_emails_and_stuff": {
                     "config": {
                         "enableRichtext": 1,
                         "type": "text"
                     },
-                    "fullKey": "tx_mask_name_item",
+                    "fullKey": "tx_mask_emails_and_stuff",
                     "inlineParent": "tx_mask_section_team",
-                    "key": "name_item",
-                    "label": "Name & Surname",
-                    "order": 1,
+                    "key": "emails_and_stuff",
+                    "label": "Name, Emails and co",
+                    "order": 3,
                     "type": "richtext"
+                },
+                "tx_mask_not_visible_only_for_decoriation": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_not_visible_only_for_decoriation",
+                    "inlineParent": "tx_mask_section_team",
+                    "key": "not_visible_only_for_decoriation",
+                    "label": "Name \u2013\u00a0not visible in frontend",
+                    "order": 1,
+                    "type": "string"
+                },
+                "tx_mask_team_short_short": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_team_short_short",
+                    "inlineParent": "tx_mask_section_team",
+                    "key": "team_short_short",
+                    "label": "Short description for mobile",
+                    "order": 5,
+                    "type": "richtext"
+                },
+                "tx_mask_tema_image": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_tema_image",
+                    "imageoverlayPalette": 1,
+                    "inlineParent": "tx_mask_section_team",
+                    "key": "tema_image",
+                    "label": "Image",
+                    "order": 2,
+                    "type": "file"
                 }
             }
         },

@@ -1,29 +1,31 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
     <div id="c{data.uid}" class=" mask-element frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
         <div class="">
-            <div class="container">
+            <div class="container-fluid container-md">
                 <div class="row justify-content-center">
-                    <div class="col-12 col-md-6 text-uppercase font-34 line-height-1-2">
+                    <div class="col-12 col-md-10 col-lg-6 text-uppercase font-34 line-height-1-2">
                         <f:if condition="{data.tx_mask_biggger_text}">
                             {data.tx_mask_biggger_text -> f:format.html()}
                         </f:if>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-0 col-md-3"></div>
-                    <div class="col-12 col-md-9">
-                        <div class="line"></div>
+                <f:if condition="{data.tx_mask_daa_add_line}">
+                    <div class="row">
+                        <div class="col-0 col-md-1 col-lg-3"></div>
+                        <div class="col-12 col-md-10 col-lg-9">
+                            <div class="line"></div>
+                        </div>
                     </div>
-                </div>
+                </f:if>
             </div>
-            <div class="container">
+            <div class="container-fluid container-md">
                 <div class="row justify-content-center pt-40">
-                    <div class="col-12 col-md-3 font-15">
+                    <div class="col-12 col-md-5 col-lg-3 font-15 nopadpp">
                         <f:if condition="{data.tx_mask_first_columnus}">
                             {data.tx_mask_first_columnus -> f:format.html()}
                         </f:if>
                     </div>
-                    <div class="col-12 col-md-3 font-15">
+                    <div class="col-12 col-md-5 col-lg-3 font-15 nopadpp">
                         <f:if condition="{data.tx_mask_second_columnus}">
                             {data.tx_mask_second_columnus -> f:format.html()}
                         </f:if>

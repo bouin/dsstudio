@@ -1,35 +1,56 @@
 <div xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
-
     <div class="mailchimp">
-        <div class="container pt-100 pb-100">
+        <div class="container-fluid container-md pt-100 pb-100">
             <div class="row justify-content-center pt-100 pb-100">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-9 col-lg-7 text-centers">
                     <div>
-                        <div class="mailchimp-headline font-area font-34">
+                        <div class="mailchimp-headline font-28" style="">
                             DS STUDIO NEWSLETTER
                         </div>
-                        <p>
-                            Coming soon
-                        </p>
+                        <div class="newsletter-mailchimp">
+
+                            <div id="mc_embed_shell">
+                                <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+                                <div id="mc_embed_signup">
+                                    <form action="https://dsstudio.us16.list-manage.com/subscribe/post?u=2a5de1dadfb4bb0c94fa1ebd0&amp;id=b3cf637e41&amp;f_id=00cd8ae2f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                                        <div id="mc_embed_signup_scroll">
+                                            <div class="mc-field-group">
+                                                <label for="mce-EMAIL">E-Mail-Adresse <span class="asterisk">*</span></label>
+                                                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
+                                            </div>
+                                            <div id="mce-responses" class="clear foot">
+                                                <div class="response" id="mce-error-response" style="display: none;"></div>
+                                                <div class="response" id="mce-success-response" style="display: none;"></div>
+                                            </div>
+                                            <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                                /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                                                <input type="text" name="b_2a5de1dadfb4bb0c94fa1ebd0_b3cf637e41" tabindex="-1" value="">
+                                            </div>
+                                            <div class="optionalParent">
+                                                <div class="clear foot">
+                                                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="font-28 font-editorial text-editorial submit" value="Subscribe">
+                                                    <p style="margin: 0px auto;display:none;"><a href="http://eepurl.com/jli7N6" title="Mailchimp – Einfaches, schnelles E-Mail-Marketing"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="indicates-required"><span class="asterisk">*</span> Angaben erforderlich</div>
+                                </div>
+                                <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='COMPANY';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
-
     <footer id="footer_kontakt" class="section footer_kontakt">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <f:cObject typoscriptObjectPath="lib.footer1"></f:cObject>
-                    <span class="d-none d-lg-block">
+                    <span class="font-15">
                         <f:cObject typoscriptObjectPath="lib.footer2"></f:cObject>
                     </span>
-                    <span class="d-block d-lg-none">
-                        <f:cObject typoscriptObjectPath="lib.footernew"></f:cObject>
-                    </span>
-
                 </div>
             </div>
             <div class="row social-row">
