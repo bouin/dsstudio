@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <div id="c{data.uid}" class="bck-{data.tx_mask_bck_color} mask-element frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+        <f:if condition="{data.tx_mask_video_link}">
+            <video
+                    id="my-video"
+                    class="video-js vjs-big-play-centered vjs-fluid"
+                    controls
+                    preload="auto"
+                    playsinline
+                    width="100%"
+                    height="auto"
+                    poster="/fileadmin{data.tx_mask_video_poster_post.0.originalFile.identifier}"
+                    data-setup="{}">
+                <source src="{data.tx_mask_video_link}" type="video/mp4" />
+            </video>
+
+        </f:if>
+    </div>
+</html>
